@@ -1,0 +1,51 @@
+04/07/2026
+Optimización y registro de Asistencia 
+Jesús Ariel 
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Problemática: 
+El proceso actual de toma y anotación de asistencia en la plataforma SOFIA Plus es lento, tedioso y requiere demasiados pasos manuales por parte del instructor. Esto genera pérdida de tiempo valioso de clase y aumenta el riesgo de errores en el registro o de bloqueos por inactividad en la plataforma.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+La Solución: 
+Modificar la pantalla actual de "Registrar Inasistencia" dentro de SOFIA Plus. En lugar de obligar al instructor a buscar y registrar a los aprendices uno por uno, la misma página incluirá una lista completa del grupo con casillas de verificación. El instructor podrá seleccionar a varios alumnos a la vez, definirles las horas (iguales para todos o editables por cada uno), poner una justificación y elegir un rango de fechas que se configura automáticamente, enviando todo al sistema con un solo botón de guardado.
+
+
+*** 5 Preguntas Clave ***
+
+¿Qué es lo que más quita tiempo actualmente?
+
+El tener que buscar a cada aprendiz por separado y llenar el mismo formulario de horas, fechas y justificación una y otra vez para el mismo día de clase.
+
+¿Cómo ayuda esta nueva solución dentro de SOFIA Plus sin usar ventanas externas?
+
+Transforma la pantalla de registro actual. Al elegir la ficha, la plataforma ya no te pide buscar un alumno; directamente te despliega a todo el grupo en una tabla integrada para trabajar ahí mismo.
+
+¿Cómo se manejan las horas y la justificación para varios alumnos a la vez?
+
+El sistema permite escribir una cantidad de horas y una justificación general en la parte superior para aplicarla a todos los que tengan el gancho puesto. Sin embargo, cada fila tendrá su propio espacio por si el instructor necesita cambiarle las horas o la nota a un alumno específico antes de guardar.
+
+¿Cómo funcionan las fechas de la inasistencia?
+
+Al seleccionar la "Fecha de Inicio" en el calendario, el sistema rellena automáticamente la "Fecha de Fin" con ese mismo día para ahorrar clics. Si la falta duró más días, el instructor simplemente cambia la fecha de fin de manera manual.
+
+¿Qué pasa con el truco del archivo de Excel que usan los instructores?
+
+La misma pantalla de SOFIA Plus incluirá un botón integrado para "Importar Control". Al subir el archivo de Excel que el instructor llenó en la semana, el sistema marcará en la pantalla las casillas de los alumnos que faltaron y rellenará sus horas de forma automática.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Requisitos Funcionales 
+
+RF1 - Despliegue integrado del grupo: Al seleccionar el código de la ficha de caracterización, la plataforma debe mostrar la lista completa de los aprendices matriculados directamente en la pantalla actual, sin abrir ventanas adicionales.
+
+RF2 - Selección múltiple de ausentes: El sistema debe incluir casillas de verificación (ganchos) al lado de cada aprendiz para permitir al instructor seleccionar a todos los que faltaron al mismo tiempo.
+
+RF3 - Asignación de datos en bloque y personalizada: El sistema debe permitir escribir las horas y la justificación una sola vez para aplicarla a todos los seleccionados, pero manteniendo la opción de editar individualmente estos campos en la fila de cada aprendiz si su caso es diferente.
+
+RF4 - Duplicado automático de fechas: El sistema debe copiar automáticamente la "Fecha de Inicio" en el campo de "Fecha de Fin" al momento de ser seleccionada por el instructor, permitiendo su modificación manual si la inasistencia cubre un rango de varios días.
+
+RF5 - Carga directa de archivos: El sistema debe permitir cargar un archivo de Excel dentro de la misma pantalla para pre-marcar las casillas y rellenar los datos de las fallas acumuladas de la semana.
+
+RF6 - Registro masivo en un solo paso: El sistema debe contar con un botón único de "Registrar Novedades" que procese y guarde oficialmente en SOFIA Plus todas las inasistencias configuradas en la pantalla al mismo tiempo.
+
+------------------------------------------------------------------------------------------------------------------------------------------
