@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustentación Auditoría Ficha 3145555 — Errores y Soluciones Visuales</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-title: #0f172a;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      
+      --brand: #0284c7;
+      --brand-soft: #e0f2fe;
+      --brand-border: #bae6fd;
+      
+      --danger: #dc2626;
+      --danger-soft: #fef2f2;
+      --danger-border: #fecaca;
+      
+      --success: #059669;
+      --success-soft: #ecfdf5;
+      --success-border: #a7f3d0;
+      
+      --warning: #d97706;
+      --warning-soft: #fffbeb;
+      --warning-border: #fde68a;
+      
+      --border: #e2e8f0;
+      --shadow-lg: 0 18px 30px -5px rgba(15, 23, 42, 0.07);
+      --font-ui: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-code: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg);
+      color: var(--text-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 14px;
+    }
+
+    .presentation-wrapper {
+      width: 100%;
+      max-width: 1020px;
+      min-height: 640px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Top Navigation bar */
+    .header-bar {
+      padding: 14px 28px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+    }
+
+    .badge-sena {
+      background: var(--brand-soft);
+      color: var(--brand);
+      border: 1px solid var(--brand-border);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+    }
+
+    .slide-progress {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .progress-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: var(--brand);
+      width: 22px;
+      border-radius: 9999px;
+    }
+
+    /* Slides Viewport */
+    .slides-container {
+      flex: 1;
+      padding: 28px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      animation: fadeIn 0.25s ease-out forwards;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Titles and text */
+    h1 {
+      font-size: 2.15rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--text-title);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--text-title);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p.lead-text {
+      font-size: 1.02rem;
+      color: var(--text-body);
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+
+    /* Layout Grids */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    /* Comparison Panels */
+    .panel {
+      border-radius: 12px;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+    }
+
+    .panel-header {
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .panel.error {
+      background: var(--danger-soft);
+      border-color: var(--danger-border);
+    }
+    .panel.error .panel-header { color: var(--danger); }
+
+    .panel.solution {
+      background: var(--success-soft);
+      border-color: var(--success-border);
+    }
+    .panel.solution .panel-header { color: var(--success); }
+
+    .panel p {
+      font-size: 0.92rem;
+      line-height: 1.45;
+      color: var(--text-body);
+    }
+
+    /* Visual Diagram Card */
+    .visual-canvas {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    }
+
+    .visual-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .visual-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .mock-box {
+      flex: 1;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.88rem;
+    }
+
+    .mock-bad {
+      background: #fef2f2;
+      border: 1px dashed #f87171;
+      color: #991b1b;
+    }
+
+    .mock-good {
+      background: #ecfdf5;
+      border: 1px solid #34d399;
+      color: #065f46;
+    }
+
+    .mock-arrow {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #94a3b8;
+    }
+
+    /* Mini Concept pills */
+    .pill-footer {
+      display: flex;
+      gap: 12px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+    }
+
+    .pill-item {
+      flex: 1;
+      line-height: 1.35;
+    }
+
+    .pill-tag {
+      font-family: var(--font-code);
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: #e2e8f0;
+      color: #0f172a;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-right: 4px;
+    }
+
+    /* Bottom Control Bar */
+    .footer-bar {
+      padding: 14px 28px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid var(--border);
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-ui);
+    }
+
+    .btn:hover:not(:disabled) {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #ffffff;
+      border-color: var(--brand);
+    }
+
+    .btn-primary:hover {
+      background: #0369a1;
+      color: #ffffff;
+    }
+
+    .btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="presentation-wrapper">
+    
+    <!-- Top Bar -->
+    <div class="header-bar">
+      <span class="badge-sena">ADSO · Ficha 3145555</span>
+      <div class="slide-progress">
+        <span id="slideIndicator">1 / 5</span>
+        <div class="progress-dots" id="dotsContainer"></div>
+      </div>
+    </div>
+
+    <!-- Slides -->
+    <div class="slides-container">
+
+      <!-- SLIDE 1: PORTADA -->
+      <div class="slide active" id="slide-1">
+        <span style="font-size:0.8rem; font-weight:700; color:var(--brand); text-transform:uppercase; letter-spacing:0.5px;">Sustentación de Auditoría E2E</span>
+        <h1>Errores Encontrados y Soluciones Prácticas</h1>
+        <p class="lead-text">
+          Explicación directa, en palabras cotidianas y con demostración visual de los 3 casos que nos correspondieron de la auditoría. Qué miraron los evaluadores, por qué estaba mal y cómo quedó solucionado.
+        </p>
+
+        <div class="grid-3" style="margin-top: 24px;">
+          <div class="panel" style="background:#f8fafc; border-top: 3px solid var(--warning);">
+            <div style="font-size:0.75rem; font-weight:700; color:var(--warning); text-transform:uppercase; margin-bottom:4px;">Plan A · Hidro Smart</div>
+            <strong style="color:#0f172a; font-size:1rem;">#27 La pantalla simulada</strong>
+            <p style="font-size:0.85rem; color:#64748b; margin-top:6px;">La web mostraba 10 tips fijos inventados mientras la base de datos real estaba desconectada.</p>
+          </div>
+
+          <div class="panel" style="background:#f8fafc; border-top: 3px solid var(--brand);">
+            <div style="font-size:0.75rem; font-weight:700; color:var(--brand); text-transform:uppercase; margin-bottom:4px;">Plan B · One Language</div>
+            <strong style="color:#0f172a; font-size:1rem;">#55 Trabajo atrapado en dev</strong>
+            <p style="font-size:0.85rem; color:#64748b; margin-top:6px;">Avanzaron en borrador pero dejaron la rama oficial vacía, sin pruebas y sin revisión automática.</p>
+          </div>
+
+          <div class="panel" style="background:#f8fafc; border-top: 3px solid var(--danger);">
+            <div style="font-size:0.75rem; font-weight:700; color:var(--danger); text-transform:uppercase; margin-bottom:4px;">Plan C · EcoRuteando</div>
+            <strong style="color:#0f172a; font-size:1rem;">#83 Fuga de clave secreta</strong>
+            <p style="font-size:0.85rem; color:#64748b; margin-top:6px;">Para mostrar el código QR de seguridad, le mandaron la clave privada a una página en internet.</p>
+          </div>
+        </div>
+
+        <div style="font-size:0.88rem; color:var(--text-muted); display:flex; justify-content:space-between; margin-top:14px;">
+          <div>👥 <strong>Presentadores:</strong> Edwin Esquivel & Jesús Ariel</div>
+          <div><em>(Usa las flechas ← / → del teclado)</em></div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: PLAN A - HIDRO SMART -->
+      <div class="slide" id="slide-2">
+        <h2>💧 Plan A · Hidro Smart (Hallazgo #27)</h2>
+        <p class="lead-text">
+          <strong>El problema claro:</strong> En el servidor tenían tablas y fórmulas listas para calcular el ahorro de agua. Pero en la pantalla web pusieron <strong>10 consejos fijos inventados</strong> ("cierra la llave", "báñate en 5 minutos") y dejaron escrito en el código: <em>"esto no son recomendaciones reales"</em>. La pantalla nunca le pidió datos al servidor.
+        </p>
+
+        <!-- Visual de Solución -->
+        <div class="visual-canvas">
+          <div class="visual-title">
+            <span>Visual de la Solución</span>
+            <span style="color:var(--brand); font-weight:700;">De Maqueta a Conexión Real</span>
+          </div>
+          <div class="visual-row">
+            <!-- Antes -->
+            <div class="mock-box mock-bad">
+              <strong>✕ Antes (Lo que vio el auditor):</strong><br>
+              Pantalla con textos fijos quemados en HTML.<br>
+              <span style="font-size:0.8rem; color:#b91c1c;">🚫 Cable cortado: no llama a la base de datos.</span>
+            </div>
+            
+            <div class="mock-arrow">➔</div>
+
+            <!-- Después -->
+            <div class="mock-box mock-good">
+              <strong>✓ Solución (Lo que implementamos):</strong><br>
+              La pantalla llama a <code>GET /recommendations</code> con el token del usuario.<br>
+              <span style="font-size:0.8rem; color:#047857;">⚡ Muestra datos vivos: "Tu hogar ahorró 140L este mes".</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel error">
+            <div class="panel-header">🚨 Por qué estaba mal</div>
+            <p>El usuario siempre veía lo mismo aunque gastara más agua. En la auditoría esto cuenta como <strong>flujo roto</strong> porque es una pantalla de cartón.</p>
+          </div>
+          <div class="panel solution">
+            <div class="panel-header">🛠️ Cómo lo solucionamos</div>
+            <p>Conectamos la pantalla a la base de datos usando el endpoint del servidor y consumimos la vista de resumen de ahorro calculada en PostgreSQL.</p>
+          </div>
+        </div>
+
+        <div class="pill-footer">
+          <div class="pill-item">
+            <span class="pill-tag">Endpoint / API</span>
+            Es la ventanilla del servidor donde la pantalla pide los datos reales.
+          </div>
+          <div class="pill-item">
+            <span class="pill-tag">Vista Materializada</span>
+            Una tabla pre-calculada en la base de datos para no poner lento el sistema sumando millones de gotas de agua.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: PLAN B - ONE LANGUAGE -->
+      <div class="slide" id="slide-3">
+        <h2>🗣️ Plan B · One Language (Hallazgo #55)</h2>
+        <p class="lead-text">
+          <strong>El problema claro:</strong> Los compañeros trabajaron bastante en su rama de borrador (<code>dev</code>), pero <strong>la rama principal (<code>main</code>) la dejaron completamente vacía</strong>. Además, no tenían pruebas que revisaran que la traducción de señas funcionara y no tenían ningún robot que verificara si el código servía antes de subirlo.
+        </p>
+
+        <!-- Visual de Solución -->
+        <div class="visual-canvas">
+          <div class="visual-title">
+            <span>Visual de la Solución</span>
+            <span style="color:var(--brand); font-weight:700;">Flujo de Ramas y Robot de CI</span>
+          </div>
+          <div class="visual-row">
+            <!-- Antes -->
+            <div class="mock-box mock-bad">
+              <strong>✕ Antes (Desorden en GitHub):</strong><br>
+              <code>main:</code> [Vacía] ╌╌ <code>dev:</code> [77 commits aislados]<br>
+              <span style="font-size:0.8rem; color:#b91c1c;">🚫 Para el evaluador no había nada entregado formalmente.</span>
+            </div>
+            
+            <div class="mock-arrow">➔</div>
+
+            <!-- Después -->
+            <div class="mock-box mock-good">
+              <strong>✓ Solución (Entrega Formal):</strong><br>
+              Robot de GitHub revisa: Compilación ✓ | Pruebas ✓<br>
+              <span style="font-size:0.8rem; color:#047857;">🚀 Fusión a <code>main</code> lista para desplegar y calificar.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel error">
+            <div class="panel-header">🚨 Por qué estaba mal</div>
+            <p>En el SENA y en cualquier empresa, si el código no está en la rama <code>main</code>, se considera que <strong>no fue entregado</strong>. Y sin pruebas, cualquier cambio puede dañar la IA sin que nadie se entere.</p>
+          </div>
+          <div class="panel solution">
+            <div class="panel-header">🛠️ Cómo lo solucionamos</div>
+            <p>Pasamos el código de <code>dev</code> a <code>main</code> con un Pull Request ordenado, escribimos pruebas para el modelo y pusimos a GitHub Actions a probar todo automáticamente.</p>
+          </div>
+        </div>
+
+        <div class="pill-footer">
+          <div class="pill-item">
+            <span class="pill-tag">Rama main</span>
+            Es la vitrina del negocio: solo debe tener código probado y listo para funcionar.
+          </div>
+          <div class="pill-item">
+            <span class="pill-tag">CI (Integración Continua)</span>
+            Un vigilante virtual en la nube que prueba que nada esté dañado cada vez que subes un cambio.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: PLAN C - ECORUTEANDO -->
+      <div class="slide" id="slide-4">
+        <h2>🔐 Plan C · EcoRuteando (Hallazgo #83)</h2>
+        <p class="lead-text">
+          <strong>El problema claro:</strong> Para activar el código de 6 dígitos del celular (segundo factor 2FA), el sistema crea una clave secreta. El error fue que para pintar el dibujo del código QR, <strong>le mandaron la clave secreta por internet a una página ajena (<code>qrserver.com</code>)</strong>. Es como mandarle la clave del banco a un desconocido para que te la imprima en un sticker.
+        </p>
+
+        <!-- Visual de Solución -->
+        <div class="visual-canvas">
+          <div class="visual-title">
+            <span>Visual de la Solución</span>
+            <span style="color:var(--brand); font-weight:700;">Protección Total del Secreto 2FA</span>
+          </div>
+          <div class="visual-row">
+            <!-- Antes -->
+            <div class="mock-box mock-bad">
+              <strong>✕ Antes (Fuga Peligrosa):</strong><br>
+              Celular envía clave secreta ➔ Servidor público desconocido.<br>
+              <span style="font-size:0.8rem; color:#b91c1c;">🚫 Un hacker o esa página podían clonar los códigos de acceso.</span>
+            </div>
+            
+            <div class="mock-arrow">➔</div>
+
+            <!-- Después -->
+            <div class="mock-box mock-good">
+              <strong>✓ Solución (Seguridad en Casa):</strong><br>
+              La app dibuja el QR directamente en la pantalla del celular.<br>
+              <span style="font-size:0.8rem; color:#047857;">🔒 La clave secreta nunca sale a internet ni se comparte con nadie.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel error">
+            <div class="panel-header">🚨 Por qué estaba mal</div>
+            <p>Es una falla crítica de seguridad. Si el dueño de esa página externa o alguien intercepta la red, puede clonar los códigos del celular y entrar a cualquier cuenta.</p>
+          </div>
+          <div class="panel solution">
+            <div class="panel-header">🛠️ Cómo lo solucionamos</div>
+            <p>Instalamos una librería dentro de la propia app (<code>qrcode.react</code>) para pintar el QR localmente en pantalla, bloqueamos llamadas a páginas raras y cambiamos las claves expuestas.</p>
+          </div>
+        </div>
+
+        <div class="pill-footer">
+          <div class="pill-item">
+            <span class="pill-tag">TOTP / 2FA</span>
+            El código numérico temporal que cambia cada 30 segundos en Google Authenticator.
+          </div>
+          <div class="pill-item">
+            <span class="pill-tag">Generación Local</span>
+            Dibujar la imagen directamente en la memoria del teléfono sin enviar datos a la nube.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 5: CONCLUSIONES DEL APRENDIZAJE -->
+      <div class="slide" id="slide-5">
+        <h2>🏁 Conclusión de Nuestra Revisión</h2>
+        <p class="lead-text">
+          Esta auditoría nos enseña que el software no solo debe "verse bonito", sino que debe cumplir con las reglas reales de la industria:
+        </p>
+
+        <div class="grid-3" style="margin-top: 18px;">
+          <div class="panel" style="background:#ffffff; border-top: 4px solid var(--brand);">
+            <strong style="color:var(--brand); display:block; margin-bottom:6px;">1. Datos Reales</strong>
+            <p style="font-size:0.88rem; color:var(--text-body);">
+              Las pantallas deben hablar siempre con la base de datos a través de servicios reales. Nada de datos fijos o maquetas para disimular.
+            </p>
+          </div>
+
+          <div class="panel" style="background:#ffffff; border-top: 4px solid var(--warning);">
+            <strong style="color:var(--warning); display:block; margin-bottom:6px;">2. Entregas Claras</strong>
+            <p style="font-size:0.88rem; color:var(--text-body);">
+              El código tiene que estar en la rama oficial (<code>main</code>), con pruebas que certifiquen que funciona antes de mostrarlo al público.
+            </p>
+          </div>
+
+          <div class="panel" style="background:#ffffff; border-top: 4px solid var(--danger);">
+            <strong style="color:var(--danger); display:block; margin-bottom:6px;">3. Cero Fuga de Claves</strong>
+            <p style="font-size:0.88rem; color:var(--text-body);">
+              Las claves y contraseñas no se envían a páginas de terceros. Todo lo que sea seguridad se procesa de forma hermética y local.
+            </p>
+          </div>
+        </div>
+
+        <div style="background:var(--success-soft); border:1px solid var(--success-border); border-radius:10px; padding:12px 18px; margin-top:20px; text-align:center; font-weight:700; color:#047857; font-size:0.95rem;">
+          ✓ Con estas 3 soluciones aplicadas, los flujos quedan completos, seguros y listos para calificación.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Controls -->
+    <div class="footer-bar">
+      <div style="font-size:0.85rem; color:var(--text-muted);">
+        Navegación: <strong>← Anterior</strong> / <strong>Siguiente →</strong>
+      </div>
+      <div class="btn-group">
+        <button class="btn" id="prevBtn" onclick="moveSlide(-1)" disabled>← Anterior</button>
+        <button class="btn btn-primary" id="nextBtn" onclick="moveSlide(1)">Siguiente →</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 5;
+
+    function buildDots() {
+      const container = document.getElementById('dotsContainer');
+      container.innerHTML = '';
+      for (let i = 1; i <= totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = `dot ${i === currentSlide ? 'active' : ''}`;
+        container.appendChild(dot);
+      }
+    }
+
+    function showSlide() {
+      document.querySelectorAll('.slide').forEach((s, idx) => {
+        s.classList.remove('active');
+        if (idx + 1 === currentSlide) {
+          s.classList.add('active');
+        }
+      });
+
+      document.getElementById('slideIndicator').textContent = `${currentSlide} / ${totalSlides}`;
+      document.getElementById('prevBtn').disabled = (currentSlide === 1);
+      
+      const nextBtn = document.getElementById('nextBtn');
+      if (currentSlide === totalSlides) {
+        nextBtn.textContent = 'Reiniciar ↻';
+      } else {
+        nextBtn.textContent = 'Siguiente →';
+      }
+
+      buildDots();
+    }
+
+    function moveSlide(dir) {
+      currentSlide += dir;
+      if (currentSlide > totalSlides) {
+        currentSlide = 1;
+      } else if (currentSlide < 1) {
+        currentSlide = 1;
+      }
+      showSlide();
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        moveSlide(1);
+      } else if (e.key === 'ArrowLeft') {
+        moveSlide(-1);
+      }
+    });
+
+    buildDots();
+  </script>
+</body>
+</html>
