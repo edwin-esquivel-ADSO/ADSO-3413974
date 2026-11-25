@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 960" width="100%" height="100%" style="background:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="1360" height="960" fill="#f8fafc" />
+
+  <!-- Título -->
+  <rect x="25" y="20" width="1310" height="48" rx="8" fill="#0f172a" />
+  <text x="45" y="49" font-size="14" font-weight="bold" fill="#ffffff">Modelo Entidad-Relación (MER) · Nuvora — Notación Pata de Gallo (Crow's Foot · 11 Entidades)</text>
+
+  <!-- ================= ENTIDADES ================= -->
+  <!-- 1. ROLES -->
+  <g transform="translate(40, 100)" filter="url(#shadow)">
+    <rect width="220" height="90" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2" />
+    <rect width="220" height="28" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2" />
+    <text x="110" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">roles</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK  id : UUID</text>
+    <text x="12" y="66" font-size="11" fill="#334155">UQ  nombre : VARCHAR(30)</text>
+    <text x="12" y="82" font-size="10" fill="#64748b">     [ADMIN, LOCATARIO, CAJERO, VISITANTE]</text>
+  </g>
+
+  <!-- 2. USUARIOS -->
+  <g transform="translate(40, 260)" filter="url(#shadow)">
+    <rect width="240" height="155" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2" />
+    <rect width="240" height="28" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2" />
+    <text x="120" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">usuarios</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK  id : UUID</text>
+    <text x="12" y="65" font-size="11" fill="#0369a1">FK  rol_id : UUID (NOT NULL)</text>
+    <text x="12" y="82" font-size="11" fill="#0369a1">FK  local_id : UUID (NULLABLE)</text>
+    <text x="12" y="99" font-size="11" fill="#334155">    nombre : VARCHAR(120)</text>
+    <text x="12" y="116" font-size="11" fill="#334155">UQ  correo : VARCHAR(150)</text>
+    <text x="12" y="133" font-size="11" fill="#334155">    password_hash : TEXT</text>
+    <text x="12" y="149" font-size="11" fill="#334155">    creado_en : TIMESTAMP</text>
+  </g>
+
+  <!-- 3. LOCALES -->
+  <g transform="translate(410, 100)" filter="url(#shadow)">
+    <rect width="240" height="145" rx="6" fill="#ffffff" stroke="#475569" stroke-width="2" />
+    <rect width="240" height="28" rx="4" fill="#f1f5f9" stroke="#475569" stroke-width="2" />
+    <text x="120" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f172a">locales</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK  id : UUID</text>
+    <text x="12" y="65" font-size="11" fill="#334155">    nombre : VARCHAR(100)</text>
+    <text x="12" y="82" font-size="11" fill="#334155">UQ  numero_local : VARCHAR(20)</text>
+    <text x="12" y="99" font-size="11" fill="#334155">    descripcion : TEXT</text>
+    <text x="12" y="116" font-size="11" fill="#334155">    logo_url : TEXT</text>
+    <text x="12" y="133" font-size="11" fill="#334155">    estado_operativo : BOOLEAN</text>
+  </g>
+
+  <!-- 4. LOCALES_CATEGORIAS (Entidad Asociativa N:M con atributos propios) -->
+  <g transform="translate(730, 100)" filter="url(#shadow)">
+    <rect width="270" height="125" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2.2" />
+    <rect width="270" height="28" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="2.2" />
+    <text x="135" y="19" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#92400e">locales_categorias (Asociativa N:M)</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK,FK  local_id : UUID</text>
+    <text x="12" y="66" font-size="11" font-weight="bold" fill="#0f172a">PK,FK  categoria_id : UUID</text>
+    <text x="12" y="86" font-size="11" fill="#78350f">       es_categoria_principal : BOOLEAN</text>
+    <text x="12" y="104" font-size="11" fill="#78350f">       fecha_asignacion : TIMESTAMP</text>
+  </g>
+
+  <!-- 5. CATEGORIAS -->
+  <g transform="translate(1090, 105)" filter="url(#shadow)">
+    <rect width="220" height="105" rx="6" fill="#ffffff" stroke="#475569" stroke-width="2" />
+    <rect width="220" height="28" rx="4" fill="#f1f5f9" stroke="#475569" stroke-width="2" />
+    <text x="110" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f172a">categorias</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK  id : UUID</text>
+    <text x="12" y="68" font-size="11" fill="#334155">UQ  nombre : VARCHAR(60)</text>
+    <text x="12" y="88" font-size="11" fill="#334155">    icono : VARCHAR(50)</text>
+  </g>
+
+  <!-- 6. PRODUCTOS -->
+  <g transform="translate(1070, 290)" filter="url(#shadow)">
+    <rect width="240" height="150" rx="6" fill="#ffffff" stroke="#475569" stroke-width="2" />
+    <rect width="240" height="28" rx="4" fill="#f1f5f9" stroke="#475569" stroke-width="2" />
+    <text x="120" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f172a">productos</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK  id : UUID</text>
+    <text x="12" y="65" font-size="11" fill="#0369a1">FK  local_id : UUID (NOT NULL)</text>
+    <text x="12" y="82" font-size="11" fill="#334155">    nombre : VARCHAR(120)</text>
+    <text x="12" y="99" font-size="11" fill="#334155">    descripcion : TEXT</text>
+    <text x="12" y="116" font-size="11" fill="#334155">    precio_regular : DECIMAL(10,2)</text>
+    <text x="12" y="133" font-size="11" fill="#334155">    disponible : BOOLEAN</text>
+  </g>
+
+  <!-- 7. PROMOCIONES -->
+  <g transform="translate(550, 320)" filter="url(#shadow)">
+    <rect width="275" height="205" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2" />
+    <rect width="275" height="28" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+    <text x="137" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">promociones</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK  id : UUID</text>
+    <text x="12" y="65" font-size="11" fill="#0369a1">FK  local_id : UUID (NOT NULL)</text>
+    <text x="12" y="82" font-size="11" fill="#0369a1">FK  producto_id : UUID (NOT NULL)</text>
+    <text x="12" y="99" font-size="11" fill="#334155">    titulo : VARCHAR(140)</text>
+    <text x="12" y="116" font-size="11" fill="#334155">    precio_oferta : DECIMAL(10,2)</text>
+    <text x="12" y="133" font-size="11" fill="#334155">    porcentaje_descuento : INT</text>
+    <text x="12" y="150" font-size="11" fill="#334155">    stock_maximo : INT</text>
+    <text x="12" y="167" font-size="11" fill="#334155">    fecha_inicio / fecha_fin : TIMESTAMP</text>
+    <text x="12" y="184" font-size="11" fill="#334155">    estado : VARCHAR(20)</text>
+  </g>
+
+  <!-- 8. HORARIOS_PROMOCION (Entidad Débil - Doble borde) -->
+  <g transform="translate(1060, 500)" filter="url(#shadow)">
+    <rect width="255" height="135" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2" />
+    <rect x="4" y="4" width="247" height="127" rx="4" fill="none" stroke="#d97706" stroke-width="1" />
+    <rect width="255" height="28" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+    <text x="127" y="19" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#92400e">horarios_promocion (Débil)</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK  id : UUID</text>
+    <text x="12" y="66" font-size="11" fill="#0369a1">FK  promocion_id : UUID (NOT NULL)</text>
+    <text x="12" y="84" font-size="11" fill="#334155">    dia_semana : SMALLINT (1-7)</text>
+    <text x="12" y="102" font-size="11" fill="#334155">    hora_inicio : TIME</text>
+    <text x="12" y="120" font-size="11" fill="#334155">    hora_fin : TIME</text>
+  </g>
+
+  <!-- 9. CUPONES -->
+  <g transform="translate(40, 510)" filter="url(#shadow)">
+    <rect width="260" height="160" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2" />
+    <rect width="260" height="28" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2" />
+    <text x="130" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#166534">cupones</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK  id : UUID</text>
+    <text x="12" y="66" font-size="11" fill="#0369a1">FK  promocion_id : UUID (NOT NULL)</text>
+    <text x="12" y="84" font-size="11" fill="#0369a1">FK  usuario_id : UUID (NOT NULL)</text>
+    <text x="12" y="102" font-size="11" fill="#334155">UQ  codigo_unico : VARCHAR(20)</text>
+    <text x="12" y="120" font-size="11" fill="#334155">    estado : VARCHAR(20)</text>
+    <text x="12" y="138" font-size="11" fill="#334155">    fecha_emision : TIMESTAMP</text>
+    <text x="12" y="153" font-size="11" fill="#334155">    fecha_expiracion : TIMESTAMP</text>
+  </g>
+
+  <!-- 10. REDENCIONES -->
+  <g transform="translate(440, 620)" filter="url(#shadow)">
+    <rect width="265" height="150" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="2" />
+    <rect width="265" height="28" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="2" />
+    <text x="132" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#991b1b">redenciones</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK  id : UUID</text>
+    <text x="12" y="66" font-size="11" fill="#0369a1">FK,UQ cupon_id : UUID (NOT NULL)</text>
+    <text x="12" y="84" font-size="11" fill="#0369a1">FK    cajero_id : UUID (NOT NULL)</text>
+    <text x="12" y="102" font-size="11" fill="#0369a1">FK    local_id : UUID (NOT NULL)</text>
+    <text x="12" y="120" font-size="11" fill="#334155">      fecha_redencion : TIMESTAMP</text>
+    <text x="12" y="138" font-size="11" fill="#334155">      monto_descontado : DECIMAL(10,2)</text>
+  </g>
+
+  <!-- 11. AUDITORIA_LOGS -->
+  <g transform="translate(830, 680)" filter="url(#shadow)">
+    <rect width="265" height="150" rx="6" fill="#ffffff" stroke="#9333ea" stroke-width="2" />
+    <rect width="265" height="28" rx="4" fill="#f3e8ff" stroke="#9333ea" stroke-width="2" />
+    <text x="132" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#6b21a8">auditoria_logs</text>
+    <text x="12" y="48" font-size="11" font-weight="bold" fill="#0f172a">PK  id : UUID</text>
+    <text x="12" y="66" font-size="11" fill="#0369a1">FK  usuario_id : UUID (NOT NULL)</text>
+    <text x="12" y="84" font-size="11" fill="#0369a1">FK  redencion_id : UUID (NULLABLE)</text>
+    <text x="12" y="102" font-size="11" fill="#334155">    accion : VARCHAR(60)</text>
+    <text x="12" y="120" font-size="11" fill="#334155">    ip_origen : VARCHAR(45)</text>
+    <text x="12" y="138" font-size="11" fill="#334155">    detalles_json : JSONB / timestamp</text>
+  </g>
+
+  <!-- RELACIONES PATA DE GALLO -->
+  <!-- roles (1) a (0..*) usuarios -->
+  <line x1="150" y1="190" x2="150" y2="260" stroke="#334155" stroke-width="1.8" />
+  <!-- uno obligatorio en roles -->
+  <line x1="142" y1="198" x2="158" y2="198" stroke="#334155" stroke-width="1.8" />
+  <line x1="142" y1="204" x2="158" y2="204" stroke="#334155" stroke-width="1.8" />
+  <!-- cero o muchos en usuarios -->
+  <circle cx="150" cy="240" r="4.5" fill="#ffffff" stroke="#334155" stroke-width="1.6" />
+  <line x1="150" y1="245" x2="142" y2="260" stroke="#334155" stroke-width="1.6" />
+  <line x1="150" y1="245" x2="158" y2="260" stroke="#334155" stroke-width="1.6" />
+
+  <!-- locales (0..1) a (0..*) usuarios -->
+  <polyline points="410,175 340,175 340,310 280,310" fill="none" stroke="#334155" stroke-width="1.6" />
+  <circle cx="395" cy="175" r="4.5" fill="#ffffff" stroke="#334155" stroke-width="1.6" />
+  <line x1="402" y1="168" x2="402" y2="182" stroke="#334155" stroke-width="1.6" />
+  <circle cx="298" cy="310" r="4.5" fill="#ffffff" stroke="#334155" stroke-width="1.6" />
+  <line x1="294" y1="310" x2="280" y2="303" stroke="#334155" stroke-width="1.6" />
+  <line x1="294" y1="310" x2="280" y2="317" stroke="#334155" stroke-width="1.6" />
+
+  <!-- locales a locales_categorias a categorias -->
+  <line x1="650" y1="162" x2="730" y2="162" stroke="#334155" stroke-width="1.8" />
+  <line x1="658" y1="155" x2="658" y2="169" stroke="#334155" stroke-width="1.8" />
+  <line x1="664" y1="155" x2="664" y2="169" stroke="#334155" stroke-width="1.8" />
+  <line x1="715" y1="162" x2="730" y2="155" stroke="#334155" stroke-width="1.6" />
+  <line x1="715" y1="162" x2="730" y2="169" stroke="#334155" stroke-width="1.6" />
+
+  <line x1="1000" y1="162" x2="1090" y2="162" stroke="#334155" stroke-width="1.8" />
+  <line x1="1015" y1="162" x2="1000" y2="155" stroke="#334155" stroke-width="1.6" />
+  <line x1="1015" y1="162" x2="1000" y2="169" stroke="#334155" stroke-width="1.6" />
+  <line x1="1080" y1="155" x2="1080" y2="169" stroke="#334155" stroke-width="1.8" />
+  <line x1="1074" y1="155" x2="1074" y2="169" stroke="#334155" stroke-width="1.8" />
+
+  <!-- locales a productos -->
+  <polyline points="560,245 560,275 1190,275 1190,290" fill="none" stroke="#334155" stroke-width="1.6" />
+  <line x1="553" y1="254" x2="567" y2="254" stroke="#334155" stroke-width="1.6" />
+  <line x1="553" y1="260" x2="567" y2="260" stroke="#334155" stroke-width="1.6" />
+  <circle cx="1190" cy="276" r="4" fill="#ffffff" stroke="#334155" stroke-width="1.5" />
+  <line x1="1190" y1="280" x2="1182" y2="290" stroke="#334155" stroke-width="1.6" />
+  <line x1="1190" y1="280" x2="1198" y2="290" stroke="#334155" stroke-width="1.6" />
+
+  <!-- locales a promociones -->
+  <polyline points="495,245 495,380 550,380" fill="none" stroke="#334155" stroke-width="1.6" />
+  <line x1="488" y1="254" x2="502" y2="254" stroke="#334155" stroke-width="1.6" />
+  <line x1="488" y1="260" x2="502" y2="260" stroke="#334155" stroke-width="1.6" />
+  <circle cx="534" cy="380" r="4.5" fill="#ffffff" stroke="#334155" stroke-width="1.6" />
+  <line x1="538" y1="380" x2="550" y2="373" stroke="#334155" stroke-width="1.6" />
+  <line x1="538" y1="380" x2="550" y2="387" stroke="#334155" stroke-width="1.6" />
+
+  <!-- productos a promociones -->
+  <line x1="1070" y1="380" x2="825" y2="380" stroke="#334155" stroke-width="1.6" />
+  <line x1="1060" y1="373" x2="1060" y2="387" stroke="#334155" stroke-width="1.6" />
+  <line x1="1054" y1="373" x2="1054" y2="387" stroke="#334155" stroke-width="1.6" />
+  <circle cx="842" cy="380" r="4.5" fill="#ffffff" stroke="#334155" stroke-width="1.6" />
+  <line x1="838" y1="380" x2="825" y2="373" stroke="#334155" stroke-width="1.6" />
+  <line x1="838" y1="380" x2="825" y2="387" stroke="#334155" stroke-width="1.6" />
+
+  <!-- promociones a horarios_promocion (Debil) -->
+  <polyline points="825,470 960,470 960,565 1060,565" fill="none" stroke="#d97706" stroke-width="1.8" />
+  <line x1="835" y1="463" x2="835" y2="477" stroke="#d97706" stroke-width="1.8" />
+  <line x1="841" y1="463" x2="841" y2="477" stroke="#d97706" stroke-width="1.8" />
+  <circle cx="1042" cy="565" r="4.5" fill="#ffffff" stroke="#d97706" stroke-width="1.6" />
+  <line x1="1046" y1="565" x2="1060" y2="558" stroke="#d97706" stroke-width="1.6" />
+  <line x1="1046" y1="565" x2="1060" y2="572" stroke="#d97706" stroke-width="1.6" />
+
+  <!-- usuarios a cupones -->
+  <line x1="150" y1="415" x2="150" y2="510" stroke="#334155" stroke-width="1.8" />
+  <line x1="142" y1="423" x2="158" y2="423" stroke="#334155" stroke-width="1.8" />
+  <line x1="142" y1="429" x2="158" y2="429" stroke="#334155" stroke-width="1.8" />
+  <circle cx="150" cy="492" r="4.5" fill="#ffffff" stroke="#334155" stroke-width="1.6" />
+  <line x1="150" y1="496" x2="142" y2="510" stroke="#334155" stroke-width="1.6" />
+  <line x1="150" y1="496" x2="158" y2="510" stroke="#334155" stroke-width="1.6" />
+
+  <!-- promociones a cupones -->
+  <polyline points="550,450 380,450 380,560 300,560" fill="none" stroke="#334155" stroke-width="1.6" />
+  <line x1="540" y1="443" x2="540" y2="457" stroke="#334155" stroke-width="1.6" />
+  <line x1="534" y1="443" x2="534" y2="457" stroke="#334155" stroke-width="1.6" />
+  <circle cx="318" cy="560" r="4.5" fill="#ffffff" stroke="#334155" stroke-width="1.6" />
+  <line x1="314" y1="560" x2="300" y2="553" stroke="#334155" stroke-width="1.6" />
+  <line x1="314" y1="560" x2="300" y2="567" stroke="#334155" stroke-width="1.6" />
+
+  <!-- cupones a redenciones (1 a 0..1) -->
+  <polyline points="170,670 170,715 440,715" fill="none" stroke="#dc2626" stroke-width="1.8" />
+  <line x1="163" y1="680" x2="177" y2="680" stroke="#dc2626" stroke-width="1.8" />
+  <line x1="163" y1="686" x2="177" y2="686" stroke="#dc2626" stroke-width="1.8" />
+  <circle cx="422" cy="715" r="4.5" fill="#ffffff" stroke="#dc2626" stroke-width="1.6" />
+  <line x1="432" y1="708" x2="432" y2="722" stroke="#dc2626" stroke-width="1.8" />
+
+  <!-- usuarios (cajero) a redenciones -->
+  <polyline points="280,375 340,375 340,660 440,660" fill="none" stroke="#334155" stroke-width="1.6" />
+  <line x1="290" y1="368" x2="290" y2="382" stroke="#334155" stroke-width="1.6" />
+  <circle cx="422" cy="660" r="4.5" fill="#ffffff" stroke="#334155" stroke-width="1.6" />
+  <line x1="426" y1="660" x2="440" y2="653" stroke="#334155" stroke-width="1.6" />
+  <line x1="426" y1="660" x2="440" y2="667" stroke="#334155" stroke-width="1.6" />
+
+  <!-- redenciones a auditoria_logs -->
+  <line x1="705" y1="735" x2="830" y2="735" stroke="#9333ea" stroke-width="1.8" />
+  <circle cx="722" cy="735" r="4.5" fill="#ffffff" stroke="#9333ea" stroke-width="1.6" />
+  <line x1="712" y1="728" x2="712" y2="742" stroke="#9333ea" stroke-width="1.6" />
+  <circle cx="812" cy="735" r="4.5" fill="#ffffff" stroke="#9333ea" stroke-width="1.6" />
+  <line x1="816" y1="735" x2="830" y2="728" stroke="#9333ea" stroke-width="1.6" />
+  <line x1="816" y1="735" x2="830" y2="742" stroke="#9333ea" stroke-width="1.6" />
+
+  <!-- Etiquetas de cardinalidad explícitas sobre las líneas -->
+  <text x="160" y="228" font-size="10.5" font-weight="bold" fill="#0f172a">1 : 0..*</text>
+  <text x="346" y="248" font-size="10.5" font-weight="bold" fill="#0f172a">0..1 : 0..*</text>
+  <text x="690" y="152" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0f172a">1 : 1..*</text>
+  <text x="1045" y="152" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0f172a">1 : 1..*</text>
+  <text x="875" y="268" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0f172a">1 : 0..*</text>
+  <text x="502" y="340" font-size="10.5" font-weight="bold" fill="#0f172a">1 : 0..*</text>
+  <text x="945" y="372" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0f172a">1 : 0..*</text>
+  <text x="965" y="518" font-size="10.5" font-weight="bold" fill="#92400e">1 : 0..*</text>
+  <text x="158" y="465" font-size="10.5" font-weight="bold" fill="#0f172a">1 : 0..*</text>
+  <text x="455" y="442" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0f172a">1 : 0..*</text>
+  <text x="295" y="707" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#991b1b">1 : 0..1</text>
+  <text x="348" y="610" font-size="10.5" font-weight="bold" fill="#0f172a">1 : 0..*</text>
+  <text x="767" y="726" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#6b21a8">0..1 : 0..*</text>
+
+  <!-- Leyenda Notación Pata de Gallo -->
+  <rect x="40" y="805" width="765" height="135" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="60" y="828" font-size="12" font-weight="bold" fill="#0f172a">Notación Declarada: Pata de Gallo (Crow's Foot)</text>
+  <text x="60" y="850" font-size="11" fill="#334155">• ( || ) Uno y solo uno (Obligatorio)   • ( |o ) Cero o uno (Opcional)   • ( |&lt; ) Uno o muchos   • ( o&lt; ) Cero o muchos</text>
+  <text x="60" y="871" font-size="11" fill="#1e3a8a">• PK = Llave Primaria (ID único) · FK = Llave Foránea (conexión entre tablas) · UQ = Valor Único · UUID = Código ID largo</text>
+  <text x="60" y="892" font-size="11" fill="#92400e">• Relación N:M Resuelta: locales_categorias (entidad asociativa con es_categoria_principal y fecha_asignacion)</text>
+  <text x="60" y="913" font-size="11" fill="#92400e">• Entidad Débil (doble borde): horarios_promocion (depende existencialmente de promociones).</text>
+</svg>

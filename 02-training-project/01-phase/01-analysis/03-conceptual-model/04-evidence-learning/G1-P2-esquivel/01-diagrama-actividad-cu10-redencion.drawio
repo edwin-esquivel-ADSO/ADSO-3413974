@@ -1,0 +1,135 @@
+<mxfile host="app.diagrams.net" modified="2026-11-25T16:30:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="ActCU10" name="Actividad CU-10 Redencion">
+    <mxGraphModel dx="1200" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1120" pageHeight="840" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Título -->
+        <mxCell id="title" value="Diagrama de Actividades · CU-10: Redimir cupón de descuento en caja (con bifurcación paralela)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f172a;strokeColor=#0f172a;fontColor=#ffffff;fontStyle=1;fontSize=14;align=left;spacingLeft=18;" vertex="1" parent="1">
+          <mxGeometry x="25" y="20" width="1070" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Carril Visitante -->
+        <mxCell id="lane_vis" value="Visitante" style="swimlane;startSize=36;fillColor=#dcfce7;strokeColor=#94a3b8;strokeWidth=1.5;fontStyle=1;fontSize=12.5;fontColor=#166534;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="25" y="75" width="230" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="v_start" value="" style="ellipse;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="lane_vis">
+          <mxGeometry x="104" y="54" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="v_qr" value="Presentar código QR del&#xa;cupón en el celular" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.8;fontSize=11;fontStyle=1;fontColor=#166534;" vertex="1" parent="lane_vis">
+          <mxGeometry x="20" y="100" width="190" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="v_rec" value="Recibir pedido con descuento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.8;fontSize=11;fontStyle=1;fontColor=#166534;" vertex="1" parent="lane_vis">
+          <mxGeometry x="20" y="615" width="190" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="v_end" value="" style="ellipse;shape=doubleEllipse;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="lane_vis">
+          <mxGeometry x="102" y="697" width="26" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- Carril Cajero -->
+        <mxCell id="lane_caj" value="Cajero (Mostrador)" style="swimlane;startSize=36;fillColor=#fee2e2;strokeColor=#94a3b8;strokeWidth=1.5;fontStyle=1;fontSize=12.5;fontColor=#991b1b;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="255" y="75" width="350" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="c_dec1" value="¿Cámara&#xa;lee el QR?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=1.8;fontSize=10;fontStyle=1;fontColor=#92400e;" vertex="1" parent="lane_caj">
+          <mxGeometry x="130" y="95" width="90" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="c_scan" value="Escanear QR con cámara" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;strokeWidth=1.8;fontSize=11;fontStyle=1;fontColor=#991b1b;" vertex="1" parent="lane_caj">
+          <mxGeometry x="15" y="190" width="150" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="c_man" value="Digitar código manualmente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1.8;fontSize=11;fontStyle=1;fontColor=#92400e;" vertex="1" parent="lane_caj">
+          <mxGeometry x="185" y="190" width="150" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="c_merge" value="" style="rhombus;fillColor=#f1f5f9;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="lane_caj">
+          <mxGeometry x="155" y="260" width="40" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="c_rech" value="Informar al visitante que&#xa;el cupón fue rechazado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;strokeWidth=1.8;fontSize=11;fontColor=#991b1b;fontStyle=1;" vertex="1" parent="lane_caj">
+          <mxGeometry x="75" y="380" width="200" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c_ok" value="Aplicar descuento, cobrar&#xa;en caja y entregar pedido" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.8;fontSize=11;fontStyle=1;fontColor=#166534;" vertex="1" parent="lane_caj">
+          <mxGeometry x="75" y="615" width="200" height="48" as="geometry" />
+        </mxCell>
+
+        <!-- Carril Sistema Nuvora -->
+        <mxCell id="lane_sys" value="Sistema Nuvora" style="swimlane;startSize=36;fillColor=#e0f2fe;strokeColor=#94a3b8;strokeWidth=1.5;fontStyle=1;fontSize=12.5;fontColor=#0369a1;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="605" y="75" width="490" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="s_val" value="Bloquear cupón y validar reglas (CU-11)&#xa;(existencia, local correcto, estado Emitido y horario)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f9ff;strokeColor=#0284c7;strokeWidth=1.8;fontSize=11;fontStyle=1;fontColor=#0c4a6e;" vertex="1" parent="lane_sys">
+          <mxGeometry x="100" y="100" width="290" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s_dec" value="¿Cupón&#xa;válido?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=1.8;fontSize=10;fontStyle=1;fontColor=#92400e;" vertex="1" parent="lane_sys">
+          <mxGeometry x="200" y="185" width="90" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="s_err" value="Liberar bloqueo y mostrar&#xa;aviso rojo con motivo exacto" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;strokeWidth=1.8;fontSize=11;fontColor=#991b1b;fontStyle=1;" vertex="1" parent="lane_sys">
+          <mxGeometry x="25" y="290" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_fork" value="Bifurcación paralela (ejecuta ambas tareas a la vez)" style="text;html=1;fontStyle=1;fontSize=9.5;fontColor=#0f172a;align=center;" vertex="1" parent="lane_sys">
+          <mxGeometry x="85" y="348" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="s_fork" value="" style="rounded=1;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="lane_sys">
+          <mxGeometry x="85" y="370" width="320" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="s_r1" value="Marcar cupón como REDIMIDO&#xa;y crear registro de redención" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.8;fontSize=11;fontColor=#166534;fontStyle=1;" vertex="1" parent="lane_sys">
+          <mxGeometry x="30" y="410" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="s_r2" value="Guardar registro inmutable&#xa;en bitácora de auditoría" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;strokeWidth=1.8;fontSize=11;fontColor=#1e40af;fontStyle=1;" vertex="1" parent="lane_sys">
+          <mxGeometry x="260" y="410" width="205" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_join" value="Unión paralela (espera a que ambas terminen)" style="text;html=1;fontStyle=1;fontSize=9.5;fontColor=#0f172a;align=center;" vertex="1" parent="lane_sys">
+          <mxGeometry x="85" y="476" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="s_join" value="" style="rounded=1;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="lane_sys">
+          <mxGeometry x="85" y="495" width="320" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="s_ok" value="Desplegar pantalla verde de&#xa;aprobado con combo y descuento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#166534;" vertex="1" parent="lane_sys">
+          <mxGeometry x="115" y="530" width="260" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="note_bars" value="&lt;b&gt;Nota sobre simbología UML:&lt;/b&gt;&#xa;Barra negra gruesa = Tareas simultáneas (en paralelo).&#xa;Al aprobar el cupón, actualiza el estado y guarda auditoría&#xa;al mismo tiempo antes de mostrar aviso verde." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="lane_sys">
+          <mxGeometry x="30" y="620" width="435" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- Conectores exactos en parent=1 (sin cruces sobre figuras) -->
+        <mxCell id="e1" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="v_start" target="v_qr"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="v_qr" target="c_dec1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="[QR legible]" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;fontStyle=1;fontColor=#166534;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="c_dec1" target="c_scan">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="345" y="201" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="[Falla cámara]" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;fontStyle=1;fontColor=#92400e;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="c_dec1" target="c_man">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="515" y="201" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e5" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="c_scan" target="c_merge">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="345" y="352" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e6" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" edge="1" parent="1" source="c_man" target="c_merge">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="515" y="352" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e7" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="c_merge" target="s_val">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="430" y="395" /><mxPoint x="570" y="395" /><mxPoint x="570" y="150" /><mxPoint x="850" y="150" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e8" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="s_val" target="s_dec"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" value="[No válido]" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#dc2626;strokeWidth=1.6;fontStyle=1;fontColor=#dc2626;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="s_dec" target="s_err">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="730" y="294" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e10" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#dc2626;strokeWidth=1.6;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="s_err" target="c_rech">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="570" y="392" /><mxPoint x="570" y="479" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e11" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#dc2626;strokeWidth=1.5;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="c_rech" target="v_end">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="285" y="479" /><mxPoint x="285" y="785" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="[Válido y vigente]" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#16a34a;strokeWidth=1.6;fontStyle=1;fontColor=#166534;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.86;entryY=0;" edge="1" parent="1" source="s_dec" target="s_fork">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="965" y="294" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e13" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.14;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="s_fork" target="s_r1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e14" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.86;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="s_fork" target="s_r2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e15" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.14;entryY=0;" edge="1" parent="1" source="s_r1" target="s_join"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e16" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.86;entryY=0;" edge="1" parent="1" source="s_r2" target="s_join"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e17" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="s_join" target="s_ok"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e18" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#16a34a;strokeWidth=1.6;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="s_ok" target="c_ok">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="580" y="631" /><mxPoint x="580" y="714" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e19" style="endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=1.6;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="c_ok" target="v_rec"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e20" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="v_rec" target="v_end"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

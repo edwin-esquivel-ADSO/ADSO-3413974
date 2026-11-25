@@ -1,0 +1,165 @@
+<mxfile host="app.diagrams.net" modified="2026-11-25T16:30:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="ActCU07" name="Actividad CU-07 Promociones">
+    <mxGraphModel dx="1100" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="780" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Título -->
+        <mxCell id="title" value="Diagrama de Actividades · CU-07: Registrar promoción comercial con cupos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f172a;strokeColor=#0f172a;fontColor=#ffffff;fontStyle=1;fontSize=14;align=left;spacingLeft=18;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="920" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Carril 1: Locatario -->
+        <mxCell id="lane_loc" value="Locatario (Administrador de Local)" style="swimlane;startSize=36;fillColor=#dbeafe;strokeColor=#94a3b8;strokeWidth=1.5;fontStyle=1;fontSize=13;fontColor=#1e3a8a;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="30" y="75" width="450" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="start" value="" style="ellipse;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="lane_loc">
+          <mxGeometry x="214" y="54" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="act1" value="Seleccionar producto e ingresar datos&#xa;(título, descuento, fechas y cupo máximo)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;strokeWidth=1.8;fontSize=11;fontStyle=1;fontColor=#1e3a8a;" vertex="1" parent="lane_loc">
+          <mxGeometry x="95" y="100" width="260" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="dec1" value="¿Oferta&#xa;relámpago?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=1.8;fontSize=10;fontStyle=1;fontColor=#92400e;" vertex="1" parent="lane_loc">
+          <mxGeometry x="185" y="180" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="act2" value="Parametrizar días y&#xa;franja horaria (CU-08)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1.8;fontSize=11;fontColor=#92400e;fontStyle=1;" vertex="1" parent="lane_loc">
+          <mxGeometry x="25" y="270" width="205" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="merge1" value="" style="rhombus;fillColor=#f1f5f9;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="lane_loc">
+          <mxGeometry x="205" y="350" width="40" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="act3" value="Confirmar envío de promoción" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;strokeWidth=1.8;fontSize=11;fontStyle=1;fontColor=#1e3a8a;" vertex="1" parent="lane_loc">
+          <mxGeometry x="115" y="410" width="220" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- Carril 2: Sistema Nuvora -->
+        <mxCell id="lane_sys" value="Sistema Nuvora" style="swimlane;startSize=36;fillColor=#e0f2fe;strokeColor=#94a3b8;strokeWidth=1.5;fontStyle=1;fontSize=13;fontColor=#0369a1;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="480" y="75" width="470" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="act4" value="Validar reglas de negocio&#xa;(precio oferta &lt; regular, fechas, cupo &gt; 0)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f9ff;strokeColor=#0284c7;strokeWidth=1.8;fontSize=11;fontStyle=1;fontColor=#0c4a6e;" vertex="1" parent="lane_sys">
+          <mxGeometry x="105" y="100" width="260" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="dec2" value="¿Datos&#xa;válidos?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=1.8;fontSize=10;fontStyle=1;fontColor=#92400e;" vertex="1" parent="lane_sys">
+          <mxGeometry x="195" y="180" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="err" value="Mostrar alerta de&#xa;error en formulario" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;strokeWidth=1.8;fontSize=11;fontColor=#991b1b;fontStyle=1;" vertex="1" parent="lane_sys">
+          <mxGeometry x="295" y="270" width="155" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="dec3" value="¿Publicar&#xa;ahora?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=1.8;fontSize=10;fontStyle=1;fontColor=#92400e;" vertex="1" parent="lane_sys">
+          <mxGeometry x="100" y="310" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="borrador" value="Guardar promoción&#xa;en estado BORRADOR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#475569;strokeWidth=1.8;fontSize=11;fontColor=#0f172a;fontStyle=1;" vertex="1" parent="lane_sys">
+          <mxGeometry x="20" y="435" width="180" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="activa" value="Guardar como ACTIVA y&#xa;publicar en catálogo visible" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.8;fontSize=11;fontStyle=1;fontColor=#166534;" vertex="1" parent="lane_sys">
+          <mxGeometry x="240" y="435" width="210" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="merge2" value="" style="rhombus;fillColor=#f1f5f9;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="lane_sys">
+          <mxGeometry x="215" y="535" width="40" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="" style="ellipse;shape=doubleEllipse;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="lane_sys">
+          <mxGeometry x="221" y="611" width="28" height="28" as="geometry" />
+        </mxCell>
+
+        <!-- Conectores con rutas exactas sin cruces (parent=1 para precisión absoluta) -->
+        <mxCell id="f1" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="start" target="act1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="act1" target="dec1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="[Sí]" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;fontStyle=1;fontColor=#92400e;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="dec1" target="act2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="157" y="285" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4" value="[No]" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;fontStyle=1;fontColor=#475569;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="dec1" target="merge1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="285" />
+              <mxPoint x="360" y="442" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f5" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="act2" target="merge1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="157" y="442" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="merge1" target="act3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="act3" target="act4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="507" />
+              <mxPoint x="440" y="201" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f8" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="act4" target="dec2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9" value="[No válido]" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#dc2626;strokeWidth=1.6;fontStyle=1;fontColor=#dc2626;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="dec2" target="err">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="852" y="285" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f10" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#dc2626;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" edge="1" parent="1" source="err" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="852" y="465" />
+              <mxPoint x="940" y="465" />
+              <mxPoint x="940" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f11" value="[Válido]" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#16a34a;strokeWidth=1.6;fontStyle=1;fontColor=#166534;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="dec2" target="dec3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="285" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f12" value="[No / Borrador]" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#475569;strokeWidth=1.6;fontStyle=1;fontColor=#475569;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="dec3" target="borrador">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f13" value="[Sí / Publicar]" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#16a34a;strokeWidth=1.6;fontStyle=1;fontColor=#166534;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="dec3" target="activa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f14" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="borrador" target="merge2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="627" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15" style="endArrow=block;endFill=1;edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" edge="1" parent="1" source="activa" target="merge2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="627" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f16" style="endArrow=block;endFill=1;strokeColor=#334155;strokeWidth=1.6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="merge2" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
