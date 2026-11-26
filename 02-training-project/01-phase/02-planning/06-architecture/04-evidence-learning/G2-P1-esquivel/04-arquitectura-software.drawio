@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Nuvora-G2-Builder" version="24.7.17">
+  <diagram id="diagram_04-arquitectura-software" name="04-arquitectura-software">
+    <mxGraphModel dx="1420" dy="880" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1120" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c2" value="CAPA 1 · PRESENTACIÓN (React / Next.js Responsivo · Solo Interfaz Visual)" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=12;fillColor=#EFF6FF;strokeColor=#2563EB;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="40" y="80" width="1040" height="150" as="geometry" /></mxCell>
+        <mxCell id="c3" value="&lt;b&gt;App Móvil Visitante&lt;/b&gt;&lt;br&gt;Catálogo, filtro $COP y Billetera QR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#60A5FA;fontSize=12;" vertex="1" parent="1"><mxGeometry x="70" y="125" width="290" height="82" as="geometry" /></mxCell>
+        <mxCell id="c4" value="&lt;b&gt;Panel Web Locatario&lt;/b&gt;&lt;br&gt;Promociones, franjas valle y métricas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#60A5FA;fontSize=12;" vertex="1" parent="1"><mxGeometry x="415" y="125" width="290" height="82" as="geometry" /></mxCell>
+        <mxCell id="c5" value="&lt;b&gt;Validador de Caja (Cajero)&lt;/b&gt;&lt;br&gt;Escáner cámara + teclado manual (&amp;lt;=1.5 s)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#60A5FA;fontSize=12;" vertex="1" parent="1"><mxGeometry x="760" y="125" width="290" height="82" as="geometry" /></mxCell>
+        <mxCell id="c6" value="CAPA 2 · LÓGICA DE NEGOCIO (API Node.js / TypeScript · Reloj Oficial del Servidor)" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=12;fillColor=#ECFDF5;strokeColor=#059669;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="40" y="295" width="1040" height="175" as="geometry" /></mxCell>
+        <mxCell id="c7" value="&lt;b&gt;Seguridad y Roles (RBAC)&lt;/b&gt;&lt;br&gt;Hash y sal, sesión por rol, Ley 1581" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#34D399;fontSize=12;" vertex="1" parent="1"><mxGeometry x="70" y="342" width="290" height="104" as="geometry" /></mxCell>
+        <mxCell id="c8" value="&lt;b&gt;Motor Catálogo y Estrategias&lt;/b&gt;&lt;br&gt;IEstrategiaVigencia (Regular/Relámpago), filtro $COP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#34D399;fontSize=12;" vertex="1" parent="1"><mxGeometry x="415" y="342" width="290" height="104" as="geometry" /></mxCell>
+        <mxCell id="c9" value="&lt;b&gt;FachadaCanjeMostrador&lt;/b&gt;&lt;br&gt;Canje atómico QR y auditoría (RNF01, RNF04)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#34D399;fontSize=12;" vertex="1" parent="1"><mxGeometry x="760" y="342" width="290" height="104" as="geometry" /></mxCell>
+        <mxCell id="c10" value="CAPA 3 · ACCESO A DATOS Y PERSISTENCIA (Repositorios + PostgreSQL 3FN)" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=12;fillColor=#FFFBEB;strokeColor=#D97706;fontStyle=1;fontSize=13;" vertex="1" parent="1"><mxGeometry x="40" y="535" width="1040" height="145" as="geometry" /></mxCell>
+        <mxCell id="c11" value="&lt;b&gt;Repositorios SQL y Transacciones&lt;/b&gt;&lt;br&gt;SELECT FOR UPDATE e índices B-Tree" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FBBF24;fontSize=12;" vertex="1" parent="1"><mxGeometry x="70" y="580" width="460" height="78" as="geometry" /></mxCell>
+        <mxCell id="c12" value="&lt;b&gt;Motor PostgreSQL (11 Tablas Normalizadas)&lt;/b&gt;&lt;br&gt;PK, FK, UNIQUE, CHECK, auditoria_logs y respaldo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FBBF24;fontSize=12;" vertex="1" parent="1"><mxGeometry x="590" y="580" width="460" height="78" as="geometry" /></mxCell>
+        <mxCell id="e11" value="REST API JSON sobre HTTPS (Puerto 443 · Token Rol)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1D4ED8;strokeWidth=2;labelBackgroundColor=#DBEAFE;" edge="1" parent="1" source="c2" target="c6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" value="SQL Parametrizado sobre TCP/TLS (Puerto 5432 · ACID)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#047857;strokeWidth=2;labelBackgroundColor=#D1FAE5;" edge="1" parent="1" source="c6" target="c10"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
