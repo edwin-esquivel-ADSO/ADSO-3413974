@@ -50,18 +50,22 @@ Los requisitos presentados a continuación corresponden a la especificación de 
 
 ---
 
-### B. Requisitos No Funcionales (RNF)
+### B. Requisitos No Funcionales (RNF — Clasificados bajo Estándar de Calidad ISO/IEC 25010)
 
-* **RNF01 (Velocidad en Caja):** La respuesta en la pantalla del cajero al escanear el código QR no debe tardar más de **1.5 segundos** en redes móviles estándar.
-* **RNF02 (Cifrado de Contraseñas):** Las contraseñas se guardarán cifradas con algoritmos de seguridad en la base de datos; la comunicación entre el navegador y el servidor viajará protegida con HTTPS.
-* **RNF03 (Códigos Aleatorios Únicos):** Los códigos de los cupones se generarán de manera aleatoria e irrepetible para que nadie pueda adivinar códigos válidos ajenos.
-* **RNF04 (Control de Canje en Base de Datos):** La base de datos bloqueará el registro del cupón al momento de leerlo para evitar que el mismo cupón pueda ser utilizado dos veces al mismo tiempo.
-* **RNF05 (Diseño Adaptado para Celulares):** Las pantallas estarán diseñadas pensando en el uso en teléfonos celulares, con botones grandes y claros para visitantes y cajeros.
-* **RNF06 (Disponibilidad del Sistema):** La plataforma funcionará con una disponibilidad mínima del **99.0%** durante el horario de atención del centro comercial (8:00 a.m. a 10:00 p.m.).
-* **RNF07 (Organización del Código):** El código fuente estará organizado por capas separadas: interfaz de usuario, lógica del servidor y tablas de base de datos.
-* **RNF08 (Respuesta ante Fallas de Conexión):** Si la conexión a internet falla temporalmente en la caja, el sistema mostrará una alerta clara y permitirá reintentar sin cerrar la pantalla.
-* **RNF09 (Protección de Datos Personales):** El manejo de los nombres y correos cumplirá con la **Ley 1581 de 2012** (Habeas Data Colombia), solicitando autorización al registrarse.
-* **RNF10 (Compatibilidad Web):** El sistema funcionará de forma correcta en navegadores modernos como Chrome, Firefox, Safari y Edge.
+Para garantizar una evaluación clara y verificable del software, los requisitos no funcionales se organizan por categoría de calidad y con su criterio numérico de aceptación:
+
+| ID | Atributo de Calidad (ISO/IEC 25010) | Descripción del Requisito No Funcional | Métrica / Criterio de Aceptación |
+| :---: | :--- | :--- | :--- |
+| **RNF01** | **Eficiencia de Desempeño** | Velocidad de respuesta en la pantalla del cajero al escanear o digitar el código del cupón. | $\le 1.5\text{ segundos}$ en red móvil o Wi-Fi estándar. |
+| **RNF02** | **Seguridad (Confidencialidad)** | Almacenamiento de contraseñas cifradas en la base de datos y conexión web protegida mediante protocolo seguro HTTPS. | $100\%$ de contraseñas cifradas (cero texto plano). |
+| **RNF03** | **Seguridad (Integridad de Cupones)** | Generación de códigos alfanuméricos aleatorios e irrepetibles para impedir que un usuario adivine cupones ajenos. | Códigos aleatorios únicos con vigencia máxima de $2\text{ horas}$. |
+| **RNF04** | **Fiabilidad (Control de Concurrencia)** | Bloqueo del registro del cupón en la base de datos al momento del canje para impedir que el mismo cupón se use dos veces al mismo tiempo. | $0$ redenciones duplicadas ante intentos simultáneos. |
+| **RNF05** | **Usabilidad** | Diseño visual adaptado para pantallas de teléfonos celulares comunes, con botones grandes y claros para visitantes y cajeros. | $100\%$ operable en celulares táctiles (botones $\ge 48\text{ px}$). |
+| **RNF06** | **Fiabilidad (Disponibilidad)** | Funcionamiento continuo de la plataforma durante el horario de atención del centro comercial San Pedro Plaza. | $\ge 99.0\%$ de disponibilidad entre 8:00 a.m. y 10:00 p.m. |
+| **RNF07** | **Mantenibilidad** | Organización del código fuente en capas separadas (interfaz visual, lógica del servidor y base de datos). | $3$ capas desacopladas sin lógica de negocio en la vista. |
+| **RNF08** | **Fiabilidad (Tolerancia a Fallos)** | Si falla temporalmente el internet en caja, la pantalla muestra una alerta clara y permite reintentar sin perder la vista. | $100\%$ de recuperación sin recargar la página ni cerrar sesión. |
+| **RNF09** | **Cumplimiento Legal** | Tratamiento de nombres y correos de los visitantes cumpliendo la Ley 1581 de 2012 (Habeas Data Colombia) con autorización explícita al registrarse. | $100\%$ de registros con casilla de autorización aceptada. |
+| **RNF10** | **Compatibilidad** | Funcionamiento correcto y uniforme en los navegadores web modernos más usados (Chrome, Firefox, Safari y Edge). | $100\%$ de compatibilidad en versiones actuales de los 4 navegadores. |
 
 ---
 

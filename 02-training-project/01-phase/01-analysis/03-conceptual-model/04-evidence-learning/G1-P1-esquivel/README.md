@@ -3,7 +3,7 @@
 **Ruta de entrega en el fork:**  
 `02-training-project/01-phase/01-analysis/03-conceptual-model/04-evidence-learning/G1-P1-esquivel/`
 
-**Fecha de entrega:** Martes 24 de noviembre de 2026 (Día 1 de commits antes del cierre del sábado 28 de noviembre a las 6:00 a. m.).  
+**Fecha de entrega:** Miércoles 25 de noviembre de 2026 (Día 2 de commits antes del cierre del sábado 28 de noviembre a las 6:00 a. m.).  
 **Criterios de evaluación y mínimos exigibles:** `Rubricas_G1.md` (Competencia 220501093 / RAPs 592375 y 592373).  
 
 ---
@@ -13,7 +13,7 @@
 - **Producto:** P1 — Plan de análisis y casos de uso
 - **Usuario de GitHub del autor:** `edwin-esquivel-ADSO`
 - **Caso de estudio:** Nuvora — Ecosistema Digital de Promociones, Directorio Interactivo y Plazoleta de Comidas para Centros Comerciales (Caso Piloto: San Pedro Plaza, Neiva)
-- **Trabajo en equipo del año:** Sí (Equipo formativo ADSO Ficha 3413974: Edwin Esquivel, Jose Covaleda, Paula Claros. Los ajustes, selección metodológica, matriz de trazabilidad y formalización UML son de autoría individual de `edwin-esquivel-ADSO`).
+- **Trabajo en equipo del año:** Sí (Equipo formativo Nuvora — ADSO Ficha 3413974. Los ajustes, selección metodológica, matriz de trazabilidad y formalización UML son de autoría individual de `edwin-esquivel-ADSO`).
 
 ---
 
@@ -26,19 +26,20 @@ A continuación se relacionan los insumos técnicos y documentos base del proyec
 | Informe preliminar de requisitos de software (SRS v1.0) | `03-execute/09-week/02-optional-activity/` (Semana de Requisitos) | Equipo Nuvora |
 | Bocetos preliminares de casos de uso y módulos comerciales | `03-execute/15-week/02-optional-activity/` | Equipo Nuvora |
 | Diagramas de flujo de procesos comerciales iniciales | `03-execute/16-week/02-optional-activity/` | Equipo Nuvora |
-| Guía de estilos y primeros wireframes de interfaz en Figma | `03-execute/17-week/02-optional-activity/` | Paula Claros / Equipo |
+| Guía de estilos y primeros wireframes de interfaz en Figma | `03-execute/17-week/02-optional-activity/` | Equipo Nuvora |
 
 ---
 
 ## 3. Qué Ajusté
 
-Se aplicaron 3 ajustes sustantivos, estructurales y verificables sobre los insumos previos para cumplir con el 100% de los criterios de la rúbrica oficial (`Rubricas_G1.md`):
+Se aplicaron 4 ajustes sustantivos, estructurales y verificables sobre los insumos previos para cumplir con el 100% de los criterios de la rúbrica oficial (`Rubricas_G1.md`):
 
-| # | Artefacto | Qué cambié y por qué | Criterio de `Rubricas_G1.md` que Mejora |
-| :-: | :--- | :--- | :--- |
-| **1** | **Delimitación del Alcance y Especificación (SRS v2.0)** | **Pivote desde minimercado barrial hacia centro comercial:** Se eliminó la dispersión logística de domicilios urbanos e inventarios volátiles de tiendas barriales (orientación pedagógica de la Instructora Karol Correa). Se formalizó el SRS v2.0 de Nuvora delimitado al Centro Comercial San Pedro Plaza con 20 RFs, 10 RNFs y estudio de campo simulado en Neiva (35 encuestas y 6 entrevistas). | **C3 (Interpreta informe de requisitos - 15 pts):** Delimita un núcleo funcional estable y elimina la carga inmanejable de pasarelas de pago y logística. |
-| **2** | **Diagrama de Casos de Uso UML** | **Refactorización de nomenclatura, actores y frontera:** Se rediseñó el diagrama completo en `.drawio` y `.svg`. Se estandarizó la nomenclatura bajo la regla estricta `[Verbo] + [Objeto]` (ej. `CU-05: Generar cupón de descuento QR`), se ubicaron los 4 actores (`Visitante`, `Locatario`, `Cajero`, `Superadministrador`) fuera de la frontera del sistema y se eliminaron casos redundantes. | **C4 (Elabora diagramas de casos de uso - 40 pts):** Cumple con 10 casos de uso bien nombrados, 4 actores y frontera delimitada sin ciclos. |
-| **3** | **Modelado de Relaciones `<<include>>` y `<<extend>>`** | **Modelado formal de reglas de negocio y excepciones:** Se incorporaron dos relaciones `<<include>>` obligatorias (autenticación mandatoria en emisión de cupón y validación atómica horaria en caja) y dos relaciones `<<extend>>` opcionales (filtro por presupuesto monetario y parametrización de franjas relámpago), cada una con justificación técnica de negocio. | **C4 (Relaciones con criterio - 40 pts):** Evita confusiones de notación y garantiza justificación conforme a la sección 7 de arbitraje. |
+| # | Artefacto | Qué cambié y por qué | Criterio de `Rubricas_G1.md` que Mejora | Enlace al commit |
+| :-: | :--- | :--- | :--- | :---: |
+| **1** | **Delimitación del Alcance y Especificación (SRS v2.0)** | **Pivote desde minimercado barrial hacia centro comercial:** Se eliminó la dispersión logística de domicilios urbanos e inventarios volátiles de tiendas barriales (orientación pedagógica curricular). Se formalizó el SRS v2.0 de Nuvora delimitado al Centro Comercial San Pedro Plaza con 20 RFs y 10 RNFs bajo métricas claras. | **C3 (Interpreta informe de requisitos - 15 pts):** Delimita un núcleo funcional estable y elimina la carga inmanejable de pasarelas de pago y logística. | [`e44a523`](https://github.com/edwin-esquivel-ADSO/ADSO-3413974/commit/e44a523c2825d007b9cc3668a68f5d9c7f886fa0) |
+| **2** | **Diagrama de Casos de Uso UML** | **Refactorización de nomenclatura, actores y topología sin cruces:** Se rediseñó el diagrama completo en `.drawio` y `.svg`. Se estandarizó la nomenclatura bajo la regla estricta `[Verbo] + [Objeto]`, se ubicaron los 4 actores (`Visitante`, `Locatario`, `Cajero`, `Superadministrador`) fuera de la frontera del sistema y se reorganizaron las columnas para eliminar cualquier cruce de líneas sobre los óvalos. | **C4 (Elabora diagramas de casos de uso - 40 pts):** Cumple con 12 casos de uso bien nombrados, 4 actores, frontera delimitada y cero cruces visuales. | [`e44a523`](https://github.com/edwin-esquivel-ADSO/ADSO-3413974/commit/e44a523c2825d007b9cc3668a68f5d9c7f886fa0) |
+| **3** | **Modelado de Relaciones `«include»` y `«extend»`** | **Modelado formal de reglas de negocio y excepciones:** Se incorporaron dos relaciones `«include»` obligatorias (autenticación mandatoria en emisión de cupón y validación horaria en caja) y dos relaciones `«extend»` opcionales (filtro por presupuesto monetario y parametrización de franjas relámpago), cada una con justificación técnica de negocio. | **C4 (Relaciones con criterio - 40 pts):** Evita confusiones de notación y garantiza justificación conforme a la sección 7 de arbitraje. | [`e44a523`](https://github.com/edwin-esquivel-ADSO/ADSO-3413974/commit/e44a523c2825d007b9cc3668a68f5d9c7f886fa0) |
+| **4** | **Matriz de Requisitos y Tabla ISO/IEC 25010** | **Cobertura del 100% de RFs y categorización de RNFs:** Se verificó la trazabilidad exacta de los 20 requisitos funcionales hacia los 12 casos de uso del diagrama y se tabularon los 10 requisitos no funcionales con atributos de calidad ISO/IEC 25010 y métricas de aceptación medibles. | **C3 (Interpreta informe de requisitos - 15 pts):** Garantiza cobertura total ($\ge 90\%$) y diferenciación clara entre RF y RNF. | [`e44a523`](https://github.com/edwin-esquivel-ADSO/ADSO-3413974/commit/e44a523c2825d007b9cc3668a68f5d9c7f886fa0) |
 
 ---
 
@@ -71,8 +72,8 @@ Artefactos y análisis desarrollados de forma individual para este Producto 1:
 - [x] Declaro que lo que tomé de mi equipo o de otra fuente está claramente identificado en la sección 2.
 - [x] Entiendo que el sábado 28 de noviembre de 2026 el instructor me hará **3 preguntas orales** sobre mis productos (una del producto 1, una del producto 2 y una tercera a su elección) y que, si respondo bien menos de 2, el producto sobre el que fallé queda con tope de 50.
 
-**Firma:** `edwin-esquivel-ADSO` (Edwin Alejandro Esquivel Bahamón)  
-**Fecha:** 24 de noviembre de 2026  
+**Firma:** `edwin-esquivel-ADSO`  
+**Fecha:** 25 de noviembre de 2026  
 
 ---
 
@@ -80,12 +81,12 @@ Artefactos y análisis desarrollados de forma individual para este Producto 1:
 
 | Herramienta | Para qué la usé | Qué verifiqué o corregí yo |
 | :--- | :--- | :--- |
-| **Antigravity / Gemini 3.8 & Claude 3.5 Sonnet** | Apoyo en la estructuración de la documentación técnica en Markdown, redacción del XML para Draw.io y optimización del código SVG vectorial del diagrama UML. | Comprobé que cada caso de uso cumpliera la regla `[Verbo] + [Objeto]`, verifiqué que no existieran ciclos en las relaciones `<<include>>` ni `<<extend>>`, validé los 20 requisitos funcionales y 10 no funcionales contra el SRS v2.0 de Nuvora y verifiqué la coherencia del cronograma con la semana de sustentación. |
+| **Asistente de IA (Antigravity)** | Apoyo en la estructuración de la documentación técnica en Markdown, formato XML para Draw.io y trazado vectorial SVG del diagrama UML. | Comprobé que cada caso de uso cumpliera la regla `[Verbo] + [Objeto]`, verifiqué que no existieran cruces ni ciclos en las relaciones `«include»` y `«extend»`, validé los 20 requisitos funcionales y 10 no funcionales contra el proyecto Nuvora y confirmé la coherencia del cronograma con la semana de evaluación. |
 
 ---
 
 ## 8. Autocontrol Antes del Push
 
-- [x] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega (Día 1 de commits programado).
+- [x] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega (Día 1: 24 nov · Día 2: 25 nov).
 - [x] No subí el marco documental del instructor, plantillas sin diligenciar ni archivos de otras personas.
-- [x] La carpeta contiene todos los artefactos obligatorios sin omitir ninguno.
+- [x] Hice `push` y comprobé en GitHub que la carpeta está publicada.

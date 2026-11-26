@@ -1,103 +1,101 @@
-<mxfile host="app.diagrams.net" modified="2026-11-24T20:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+<mxfile host="app.diagrams.net" modified="2026-11-25T11:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
   <diagram id="NuvoraUML" name="Casos de Uso - Nuvora">
-    <mxGraphModel dx="1420" dy="890" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="880" background="#ffffff">
+    <mxGraphModel dx="1420" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="790" background="#ffffff">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
         <!-- LÍMITE DEL SISTEMA (FRONTERA) -->
-        <mxCell id="boundary" value="Sistema Nuvora — Centro Comercial San Pedro Plaza" style="shape=rect;rounded=1;arcSize=3;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#0f172a;fillColor=#f8fafc;strokeColor=#0284c7;strokeWidth=2;dashed=1;spacingTop=12;" vertex="1" parent="1">
-          <mxGeometry x="180" y="30" width="810" height="780" as="geometry" />
+        <mxCell id="boundary" value="Sistema Nuvora — Centro Comercial San Pedro Plaza" style="shape=rect;rounded=1;arcSize=3;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=14;fontColor=#0f172a;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=2;dashed=1;spacingTop=12;" vertex="1" parent="1">
+          <mxGeometry x="180" y="25" width="855" height="740" as="geometry" />
         </mxCell>
 
-        <!-- SECCIONES / SUBSISTEMAS DENTRO DE LA FRONTERA -->
         <mxCell id="sub_visitante" value="MÓDULO VISITANTE &amp; CONSUMIDOR" style="text;html=1;fontStyle=1;fontSize=11;fontColor=#0369a1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="210" y="45" width="250" height="20" as="geometry" />
+          <mxGeometry x="205" y="60" width="250" height="20" as="geometry" />
         </mxCell>
 
         <mxCell id="sub_locatario" value="MÓDULO LOCATARIO, CAJERO &amp; MALL" style="text;html=1;fontStyle=1;fontSize=11;fontColor=#0369a1;align=right;" vertex="1" parent="1">
-          <mxGeometry x="710" y="45" width="250" height="20" as="geometry" />
+          <mxGeometry x="755" y="60" width="255" height="20" as="geometry" />
         </mxCell>
 
-        <!-- ================= COLUMNA 1: ACCESO Y CUPONES (VISITANTE) ================= -->
+        <!-- ================= COLUMNA 1: VISITANTE ================= -->
         <mxCell id="cu01" value="CU-01: Registrar usuario visitante" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.8;fontStyle=1;fontSize=11;fontColor=#166534;" vertex="1" parent="1">
-          <mxGeometry x="210" y="75" width="220" height="55" as="geometry" />
+          <mxGeometry x="202" y="89" width="216" height="52" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cu03" value="CU-03: Consultar catálogo de&#xa;locales y productos" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#475569;strokeWidth=1.8;fontStyle=1;fontSize=11;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="202" y="178" width="216" height="54" as="geometry" />
         </mxCell>
 
         <mxCell id="cu02" value="CU-02: Iniciar sesión en el sistema" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;strokeWidth=1.8;fontStyle=1;fontSize=11;fontColor=#1e40af;" vertex="1" parent="1">
-          <mxGeometry x="210" y="170" width="220" height="55" as="geometry" />
+          <mxGeometry x="202" y="274" width="216" height="52" as="geometry" />
         </mxCell>
 
         <mxCell id="cu05" value="CU-05: Generar cupón de descuento QR" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.8;fontStyle=1;fontSize=11;fontColor=#166534;" vertex="1" parent="1">
-          <mxGeometry x="210" y="310" width="220" height="55" as="geometry" />
+          <mxGeometry x="202" y="394" width="216" height="52" as="geometry" />
         </mxCell>
 
         <mxCell id="cu06" value="CU-06: Gestionar billetera de cupones" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#475569;strokeWidth=1.8;fontStyle=1;fontSize=11;fontColor=#0f172a;" vertex="1" parent="1">
-          <mxGeometry x="210" y="430" width="220" height="55" as="geometry" />
+          <mxGeometry x="202" y="494" width="216" height="52" as="geometry" />
         </mxCell>
 
-        <!-- ================= COLUMNA 2: CATÁLOGO Y VALIDACIÓN ================= -->
-        <mxCell id="cu03" value="CU-03: Consultar catálogo de&#xa;locales y productos" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#475569;strokeWidth=1.8;fontStyle=1;fontSize=11;fontColor=#0f172a;" vertex="1" parent="1">
-          <mxGeometry x="470" y="105" width="230" height="55" as="geometry" />
+        <!-- ================= COLUMNA 2: EXTENSIONES E INCLUSIONES ================= -->
+        <mxCell id="cu08" value="CU-08: Parametrizar franja&#xa;horaria relámpago" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1.8;dashed=1;fontStyle=1;fontSize=11;fontColor=#92400e;" vertex="1" parent="1">
+          <mxGeometry x="493" y="88" width="224" height="54" as="geometry" />
         </mxCell>
 
         <mxCell id="cu04" value="CU-04: Filtrar opciones por&#xa;presupuesto monetario" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1.8;dashed=1;fontStyle=1;fontSize=11;fontColor=#92400e;" vertex="1" parent="1">
-          <mxGeometry x="470" y="235" width="230" height="55" as="geometry" />
+          <mxGeometry x="493" y="178" width="224" height="54" as="geometry" />
         </mxCell>
 
         <mxCell id="cu11" value="CU-11: Validar pertenencia de local&#xa;y vigencia horaria" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;strokeWidth=1.8;dashed=1;fontStyle=1;fontSize=11;fontColor=#1e40af;" vertex="1" parent="1">
-          <mxGeometry x="465" y="525" width="235" height="60" as="geometry" />
+          <mxGeometry x="490" y="601" width="230" height="58" as="geometry" />
         </mxCell>
 
-        <!-- ================= COLUMNA 3: PROMOCIONES Y CAJA ================= -->
+        <!-- ================= COLUMNA 3: LOCATARIO, MALL Y CAJA ================= -->
         <mxCell id="cu07" value="CU-07: Registrar promoción&#xa;comercial con cupos" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;strokeWidth=1.8;fontStyle=1;fontSize=11;fontColor=#1e40af;" vertex="1" parent="1">
-          <mxGeometry x="735" y="105" width="225" height="55" as="geometry" />
-        </mxCell>
-
-        <mxCell id="cu08" value="CU-08: Parametrizar franja&#xa;horaria relámpago" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1.8;dashed=1;fontStyle=1;fontSize=11;fontColor=#92400e;" vertex="1" parent="1">
-          <mxGeometry x="735" y="235" width="225" height="55" as="geometry" />
+          <mxGeometry x="783" y="88" width="224" height="54" as="geometry" />
         </mxCell>
 
         <mxCell id="cu09" value="CU-09: Gestionar perfil de&#xa;local comercial" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#475569;strokeWidth=1.8;fontStyle=1;fontSize=11;fontColor=#0f172a;" vertex="1" parent="1">
-          <mxGeometry x="735" y="355" width="225" height="55" as="geometry" />
+          <mxGeometry x="783" y="218" width="224" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cu12" value="CU-12: Consultar analítica de&#xa;conversión y auditoría" style="ellipse;whiteSpace=wrap;html=1;fillColor=#faf5ff;strokeColor=#9333ea;strokeWidth=1.8;fontStyle=1;fontSize=11;fontColor=#6b21a8;" vertex="1" parent="1">
+          <mxGeometry x="780" y="351" width="230" height="58" as="geometry" />
         </mxCell>
 
         <mxCell id="cu10" value="CU-10: Redimir cupón de&#xa;descuento en caja" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;strokeWidth=2.2;fontStyle=1;fontSize=11;fontColor=#991b1b;" vertex="1" parent="1">
-          <mxGeometry x="735" y="525" width="225" height="60" as="geometry" />
+          <mxGeometry x="783" y="601" width="224" height="58" as="geometry" />
         </mxCell>
 
-        <!-- ================= CENTRO INFERIOR: ANALÍTICA ================= -->
-        <mxCell id="cu12" value="CU-12: Consultar analítica de conversión y auditoría" style="ellipse;whiteSpace=wrap;html=1;fillColor=#faf5ff;strokeColor=#9333ea;strokeWidth=1.8;fontStyle=1;fontSize=11;fontColor=#6b21a8;" vertex="1" parent="1">
-          <mxGeometry x="450" y="680" width="280" height="60" as="geometry" />
-        </mxCell>
-
-        <!-- ================= ACTORES ================= -->
+        <!-- ================= ACTORES (FUERA DE LA FRONTERA) ================= -->
         <mxCell id="act_visitante" value="Visitante&#xa;(Consumidor)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=2;fontStyle=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="50" y="235" width="55" height="105" as="geometry" />
+          <mxGeometry x="58" y="245" width="55" height="105" as="geometry" />
         </mxCell>
 
         <mxCell id="act_locatario" value="Locatario&#xa;(Admin Tienda)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dbeafe;strokeColor=#2563eb;strokeWidth=2;fontStyle=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1050" y="165" width="55" height="105" as="geometry" />
-        </mxCell>
-
-        <mxCell id="act_cajero" value="Cajero&#xa;(Validador Caja)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontStyle=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1050" y="475" width="55" height="105" as="geometry" />
+          <mxGeometry x="1128" y="165" width="55" height="105" as="geometry" />
         </mxCell>
 
         <mxCell id="act_admin" value="Superadministrador&#xa;(Gestor Mall)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f3e8ff;strokeColor=#9333ea;strokeWidth=2;fontStyle=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1050" y="650" width="55" height="105" as="geometry" />
+          <mxGeometry x="1128" y="380" width="55" height="105" as="geometry" />
         </mxCell>
 
-        <!-- ================= ASOCIACIONES VISITANTE ================= -->
+        <mxCell id="act_cajero" value="Cajero&#xa;(Validador Caja)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1128" y="585" width="55" height="105" as="geometry" />
+        </mxCell>
+
+        <!-- ================= ASOCIACIONES DIRECTAS (CERO CRUCES) ================= -->
         <mxCell id="edge_v_cu01" style="endArrow=none;html=1;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="act_visitante" target="cu01">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <mxCell id="edge_v_cu02" style="endArrow=none;html=1;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="act_visitante" target="cu02">
+        <mxCell id="edge_v_cu03" style="endArrow=none;html=1;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="act_visitante" target="cu03">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <mxCell id="edge_v_cu03" style="endArrow=none;html=1;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="act_visitante" target="cu03">
+        <mxCell id="edge_v_cu02" style="endArrow=none;html=1;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="act_visitante" target="cu02">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
@@ -109,7 +107,6 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- ================= ASOCIACIONES COMERCIALES (DERECHA) ================= -->
         <mxCell id="edge_l_cu07" style="endArrow=none;html=1;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="act_locatario" target="cu07">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -122,33 +119,28 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <mxCell id="edge_c_cu10" style="endArrow=none;html=1;strokeColor=#dc2626;strokeWidth=2;" edge="1" parent="1" source="act_cajero" target="cu10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-
         <mxCell id="edge_a_cu12" style="endArrow=none;html=1;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="act_admin" target="cu12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- ================= RELACIONES INCLUDE Y EXTEND LIMPIAS SIN CRUCES ================= -->
-
-        <!-- 1. CU-05 (Generar cupón) INCLUYE CU-02 (Iniciar sesión) - Directo y vertical hacia arriba en Columna 1 -->
-        <mxCell id="rel_inc_cu05_cu02" value="«include»" style="dashed=1;endArrow=open;strokeColor=#2563eb;strokeWidth=1.8;fontSize=11;fontColor=#1e40af;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cu05" target="cu02">
+        <mxCell id="edge_c_cu10" style="endArrow=none;html=1;strokeColor=#dc2626;strokeWidth=2;" edge="1" parent="1" source="act_cajero" target="cu10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- 2. CU-04 (Filtrar presupuesto) EXTIENDE CU-03 (Consultar catálogo) - Directo y vertical hacia arriba en Columna 2 -->
-        <mxCell id="rel_ext_cu04_cu03" value="«extend»" style="dashed=1;endArrow=open;strokeColor=#d97706;strokeWidth=1.8;fontSize=11;fontColor=#92400e;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cu04" target="cu03">
+        <!-- ================= RELACIONES INCLUDE Y EXTEND LIMPIAS ================= -->
+        <mxCell id="rel_inc_cu05_cu02" value="«include»" style="dashed=1;endArrow=open;strokeColor=#2563eb;strokeWidth=1.8;fontSize=10.5;fontColor=#1e40af;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cu05" target="cu02">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- 3. CU-08 (Franja relámpago) EXTIENDE CU-07 (Registrar promo) - Directo y vertical hacia arriba en Columna 3 -->
-        <mxCell id="rel_ext_cu08_cu07" value="«extend»" style="dashed=1;endArrow=open;strokeColor=#d97706;strokeWidth=1.8;fontSize=11;fontColor=#92400e;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cu08" target="cu07">
+        <mxCell id="rel_ext_cu04_cu03" value="«extend»" style="dashed=1;endArrow=open;strokeColor=#d97706;strokeWidth=1.8;fontSize=10.5;fontColor=#92400e;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cu04" target="cu03">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- 4. CU-10 (Redimir cupón) INCLUYE CU-11 (Validar pertenencia y vigencia) - Directo y horizontal hacia la izquierda -->
-        <mxCell id="rel_inc_cu10_cu11" value="«include»" style="dashed=1;endArrow=open;strokeColor=#2563eb;strokeWidth=1.8;fontSize=11;fontColor=#1e40af;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cu10" target="cu11">
+        <mxCell id="rel_ext_cu08_cu07" value="«extend»" style="dashed=1;endArrow=open;strokeColor=#d97706;strokeWidth=1.8;fontSize=10.5;fontColor=#92400e;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cu08" target="cu07">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rel_inc_cu10_cu11" value="«include»" style="dashed=1;endArrow=open;strokeColor=#2563eb;strokeWidth=1.8;fontSize=10.5;fontColor=#1e40af;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cu10" target="cu11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
