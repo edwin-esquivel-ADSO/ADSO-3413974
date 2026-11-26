@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="100%" height="100%" style="background:#f1f5f9; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Rótulo de Caso de Uso -->
+  <rect x="20" y="15" width="780" height="44" rx="8" fill="#0f172a" />
+  <text x="410" y="34" text-anchor="middle" font-size="12" font-weight="bold" fill="#f87171">PANTALLA 4 · ATIENDE: CU-10 (y CU-11)</text>
+  <text x="410" y="50" text-anchor="middle" font-size="11" fill="#e2e8f0">Validador Ultrarrápido de Cupón en Punto de Venta (Cajero)</text>
+
+  <!-- Panel Izquierdo: Escáner / Código Manual -->
+  <rect x="20" y="75" width="375" height="460" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadow)" />
+  <rect x="20" y="75" width="375" height="48" rx="10" fill="#dc2626" />
+  <text x="40" y="104" font-size="14" font-weight="bold" fill="#ffffff">Caja Nuvora · El Corralito (P-14)</text>
+
+  <!-- Visor de Cámara -->
+  <rect x="45" y="140" width="325" height="190" rx="10" fill="#0f172a" />
+  <rect x="115" y="160" width="185" height="150" rx="6" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-dasharray="14 8" />
+  <text x="207" y="232" text-anchor="middle" font-size="12" font-weight="bold" fill="#e2e8f0">Cámara Activa</text>
+  <text x="207" y="252" text-anchor="middle" font-size="10.5" fill="#94a3b8">Enfoca el código QR del visitante</text>
+
+  <!-- Respaldo Manual (Flujo Alterno 1a) -->
+  <text x="45" y="356" font-size="11.5" font-weight="bold" fill="#334155">¿Falla la cámara? Ingreso manual de respaldo:</text>
+  <rect x="45" y="366" width="215" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" />
+  <text x="60" y="393" font-size="14" font-weight="bold" letter-spacing="1.5" fill="#0f172a">SPP-7F2A9B</text>
+  <rect x="268" y="366" width="102" height="44" rx="8" fill="#0284c7" />
+  <text x="319" y="393" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Validar</text>
+
+  <text x="207" y="445" text-anchor="middle" font-size="10.5" fill="#64748b">Tiempo promedio de respuesta del servidor: 0.4 seg</text>
+  <rect x="45" y="465" width="325" height="48" rx="8" fill="#f1f5f9" stroke="#cbd5e1" />
+  <text x="207" y="494" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#334155">Cajero en turno: Caja 01 (Mostrador Principal)</text>
+
+  <!-- Panel Derecho: Respuestas Visuales Verde (Éxito) y Roja (Rechazo) -->
+  <!-- Tarjeta VERDE: Cupón Válido -->
+  <rect x="415" y="75" width="385" height="220" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="3" filter="url(#shadow)" />
+  <rect x="415" y="75" width="385" height="44" rx="10" fill="#16a34a" />
+  <text x="607" y="103" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">✓ VÁLIDO · CUPÓN REDIMIDO</text>
+  <text x="435" y="145" font-size="12" font-weight="bold" fill="#166534">Visitante: Camilo Andrés Rojas</text>
+  <text x="435" y="168" font-size="12" fill="#14532d">Combo: Burger Clásica + Papas + Gaseosa</text>
+  <text x="435" y="191" font-size="12" fill="#14532d">Descuento aplicado: -$6.500 COP (27% OFF)</text>
+  <rect x="435" y="210" width="345" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" />
+  <text x="607" y="236" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">TOTAL A COBRAR EN CAJA: $17.500 COP</text>
+  <text x="607" y="276" text-anchor="middle" font-size="10" fill="#15803d">Registro guardado en auditoría · Imposible reutilizar</text>
+
+  <!-- Tarjeta ROJA: Excepción / Rechazo -->
+  <rect x="415" y="315" width="385" height="220" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="3" filter="url(#shadow)" />
+  <rect x="415" y="315" width="385" height="44" rx="10" fill="#dc2626" />
+  <text x="607" y="343" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">✕ ACCESO DENEGADO · CUPÓN RECHAZADO</text>
+  <text x="435" y="388" font-size="12.5" font-weight="bold" fill="#991b1b">Motivo del rechazo automático:</text>
+  <rect x="435" y="402" width="345" height="40" rx="6" fill="#fee2e2" stroke="#ef4444" />
+  <text x="607" y="427" text-anchor="middle" font-size="12" font-weight="bold" fill="#b91c1c">YA UTILIZADO EL 26/11/2026 A LAS 03:14 P. M.</text>
+  <text x="435" y="468" font-size="11" fill="#7f1d1d">Otros motivos posibles mostrados aquí:</text>
+  <text x="435" y="486" font-size="10.5" fill="#7f1d1d">• "CUPÓN EXPIRADO (Superó las 2 horas de vigencia)"</text>
+  <text x="435" y="504" font-size="10.5" fill="#7f1d1d">• "CUPÓN NO CORRESPONDE A ESTE LOCAL"</text>
+</svg>

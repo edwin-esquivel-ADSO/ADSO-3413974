@@ -1,0 +1,44 @@
+# 09. Matriz de Trazabilidad Completa: Requisito $\rightarrow$ Artefactos (Anexo C)
+
+**Programa de Formación:** Análisis y Desarrollo de Software (ADSO) — Ficha 3413974  
+**Proyecto Formativo:** Nuvora — Centro Comercial San Pedro Plaza (Neiva)  
+**Autor:** `edwin-esquivel-ADSO`  
+**Guía 1:** Modelo Conceptual (Análisis) — **Producto 2:** Modelo de Análisis y Verificación (G1-P2)  
+
+---
+
+## 1. Cobertura Integral de Requisitos (Rúbrica G1 · Criterio C8)
+
+Esta matriz traza el **100% de los 20 Requisitos Funcionales (RF01–RF20)** desde la especificación de requisitos hasta su caso de uso, diagrama de actividades, plantilla extendida, clase conceptual de dominio, entidad del MER y pantalla del prototipo. *(Mínimo exigido por la rúbrica para el 100% en C8: $\ge 90\%$).*
+
+| Requisito | Caso de uso | Diagrama de actividades | Plantilla | Clase de dominio | Entidad del MER | Pantalla |
+| :---: | :--- | :--- | :--- | :--- | :--- | :--- |
+| **RF01** | `CU-01` Registrar usuario visitante | Flujo auxiliar de acceso (`G1-P1`) | Resumen en `G1-P1` | `Usuario`, `Visitante` | `usuarios`, `roles` | Acceso en [`Pantalla 2`](./05-prototipos-iniciales.md#pantalla-2--cu-05-y-cu-06--billetera-digital-y-cupón-qr) *(previo al cupón)* |
+| **RF02** | `CU-02` Iniciar sesión en el sistema | Flujo auxiliar de acceso (`G1-P1`) | Incluido en `CU-05` | `Usuario`, `Visitante`, `Locatario`, `Cajero` | `usuarios`, `roles` | Acceso previo en [`Pantalla 2`](./05-prototipos-iniciales.md#pantalla-2--cu-05-y-cu-06--billetera-digital-y-cupón-qr) y [`Pantalla 4`](./05-prototipos-iniciales.md#pantalla-4--cu-10--validador-de-caja-cajero) |
+| **RF03** | `CU-02` Iniciar sesión en el sistema | Flujo alterno de acceso (`G1-P1`) | Flujo alterno de acceso | `Usuario` | `usuarios` | Flujo de acceso en [`05-prototipos-iniciales.md`](./05-prototipos-iniciales.md) |
+| **RF04** | `CU-09` Gestionar perfil de local comercial | Flujo administrativo local (`G1-P1`) | Resumen en `G1-P1` | `Locatario`, `LocalComercial` | `locales`, `usuarios` | Menú lateral en [`Pantalla 3`](./05-prototipos-iniciales.md#pantalla-3--cu-07--creación-de-promoción-locatario) |
+| **RF05** | `CU-03` Consultar catálogo de locales y productos | Flujo consulta catálogo (`G1-P1`) | Base de extensión `CU-04` | `LocalComercial`, `Categoria` | `locales`, `categorias`, `locales_categorias` | [`Pantalla 1 · Directorio`](./05-prototipos-iniciales.md#pantalla-1--cu-03-y-cu-04--directorio-y-filtro-de-presupuesto) |
+| **RF06** | `CU-03` Consultar catálogo de locales y productos | Flujo consulta catálogo (`G1-P1`) | Base de extensión `CU-04` | `LocalComercial`, `Producto` | `locales`, `productos` | [`Pantalla 1 · Directorio`](./05-prototipos-iniciales.md#pantalla-1--cu-03-y-cu-04--directorio-y-filtro-de-presupuesto) |
+| **RF07** | `CU-04` Filtrar opciones por presupuesto monetario | Flujo filtro presupuesto (`G1-P1`) | Enlazado en `CU-05` | `Producto`, `Promocion` | `productos`, `promociones` | [`Pantalla 1 · Filtro $COP`](./05-prototipos-iniciales.md#pantalla-1--cu-03-y-cu-04--directorio-y-filtro-de-presupuesto) |
+| **RF08** | `CU-03` Consultar catálogo de locales y productos | Flujo consulta catálogo (`G1-P1`) | Resumen en `G1-P1` | `LocalComercial`, `Producto` | `locales`, `productos` | [`Pantalla 1 · Buscador`](./05-prototipos-iniciales.md#pantalla-1--cu-03-y-cu-04--directorio-y-filtro-de-presupuesto) |
+| **RF09** | `CU-07` Registrar promoción comercial con cupos | [`Actividad CU-07`](./01-diagrama-actividad-cu07-promocion.svg) | [`Plantilla CU-07`](./02-plantillas-extendidas-casos-uso.md#plantilla-2--cu-07--registrar-promoción-comercial-con-cupos) | `Locatario`, `Producto`, `Promocion` | `promociones`, `productos`, `locales` | [`Pantalla 3 · Nueva Promoción`](./05-prototipos-iniciales.md#pantalla-3--cu-07--creación-de-promoción-locatario) |
+| **RF10** | `CU-08` Parametrizar franja horaria relámpago | [`Actividad CU-07 (Paso CU-08)`](./01-diagrama-actividad-cu07-promocion.svg) | [`Plantilla CU-07 (Paso 4)`](./02-plantillas-extendidas-casos-uso.md#plantilla-2--cu-07--registrar-promoción-comercial-con-cupos) | `Promocion`, `FranjaHoraria` | `promociones`, `horarios_promocion` | [`Pantalla 3 · Franja Relámpago`](./05-prototipos-iniciales.md#pantalla-3--cu-07--creación-de-promoción-locatario) |
+| **RF11** | `CU-07` Registrar promoción comercial con cupos | [`Actividad CU-07 (Decisión 3)`](./01-diagrama-actividad-cu07-promocion.svg) | [`Plantilla CU-07 (Flujo 5a)`](./02-plantillas-extendidas-casos-uso.md#plantilla-2--cu-07--registrar-promoción-comercial-con-cupos) | `Promocion` | `promociones` | [`Pantalla 3 · Borrador / Publicar`](./05-prototipos-iniciales.md#pantalla-3--cu-07--creación-de-promoción-locatario) |
+| **RF12** | `CU-07` Registrar promoción comercial con cupos | [`Actividad CU-07 (Validar cupo)`](./01-diagrama-actividad-cu07-promocion.svg) | [`Plantilla CU-07`](./02-plantillas-extendidas-casos-uso.md#plantilla-2--cu-07--registrar-promoción-comercial-con-cupos) y [`CU-05 (Flujo 6a)`](./02-plantillas-extendidas-casos-uso.md#plantilla-1--cu-05--generar-cupón-de-descuento-qr) | `Promocion`, `Cupon` | `promociones`, `cupones` | [`Pantalla 3 · Cupo Máximo`](./05-prototipos-iniciales.md#pantalla-3--cu-07--creación-de-promoción-locatario) |
+| **RF13** | `CU-05` Generar cupón de descuento QR | Flujo emisión ligado a `CU-10` | [`Plantilla CU-05`](./02-plantillas-extendidas-casos-uso.md#plantilla-1--cu-05--generar-cupón-de-descuento-qr) | `Visitante`, `Promocion`, `Cupon` | `cupones`, `promociones`, `usuarios` | [`Pantalla 2 · Código Único`](./05-prototipos-iniciales.md#pantalla-2--cu-05-y-cu-06--billetera-digital-y-cupón-qr) |
+| **RF14** | `CU-05` Generar cupón de descuento QR | Flujo emisión ligado a `CU-10` | [`Plantilla CU-05 (Paso 7)`](./02-plantillas-extendidas-casos-uso.md#plantilla-1--cu-05--generar-cupón-de-descuento-qr) | `Cupon` | `cupones` | [`Pantalla 2 · QR y Temporizador`](./05-prototipos-iniciales.md#pantalla-2--cu-05-y-cu-06--billetera-digital-y-cupón-qr) |
+| **RF15** | `CU-06` Gestionar billetera de cupones | Flujo consulta billetera (`G1-P1`) | Referenciado en `CU-05 (3a)` | `Visitante`, `Cupon` | `cupones`, `usuarios` | [`Pantalla 2 · Pestañas Billetera`](./05-prototipos-iniciales.md#pantalla-2--cu-05-y-cu-06--billetera-digital-y-cupón-qr) |
+| **RF16** | `CU-10` Redimir cupón de descuento en caja | [`Actividad CU-10 (Cajero)`](./01-diagrama-actividad-cu10-redencion.svg) | [`Plantilla CU-10 (Paso 1 y 1a)`](./02-plantillas-extendidas-casos-uso.md#plantilla-3--cu-10--redimir-cupón-de-descuento-en-caja) | `Cajero`, `Cupon` | `cupones`, `usuarios` | [`Pantalla 4 · Escáner y Respaldo`](./05-prototipos-iniciales.md#pantalla-4--cu-10--validador-de-caja-cajero) |
+| **RF17** | `CU-10` Redimir cupón + `CU-11` Validar pertenencia | [`Actividad CU-10 (Validar)`](./01-diagrama-actividad-cu10-redencion.svg) | [`Plantilla CU-10 (Pasos 2-4)`](./02-plantillas-extendidas-casos-uso.md#plantilla-3--cu-10--redimir-cupón-de-descuento-en-caja) | `Cupon`, `Promocion`, `FranjaHoraria`, `LocalComercial` | `cupones`, `promociones`, `horarios_promocion`, `locales` | [`Pantalla 4 · Validación Caja`](./05-prototipos-iniciales.md#pantalla-4--cu-10--validador-de-caja-cajero) |
+| **RF18** | `CU-10` Redimir cupón de descuento en caja | [`Actividad CU-10 (Rama A y Pantallas)`](./01-diagrama-actividad-cu10-redencion.svg) | [`Plantilla CU-10 (Pasos 5-7 y 4a)`](./02-plantillas-extendidas-casos-uso.md#plantilla-3--cu-10--redimir-cupón-de-descuento-en-caja) | `Cupon`, `Redencion`, `Cajero` | `cupones`, `redenciones` | [`Pantalla 4 · Aviso Verde / Rojo`](./05-prototipos-iniciales.md#pantalla-4--cu-10--validador-de-caja-cajero) |
+| **RF19** | `CU-12` Consultar analítica de conversión y auditoría | Flujo analítica comercial (`G1-P1`) | Resumen en `G1-P1` | `Locatario`, `Promocion`, `Cupon`, `Redencion` | `promociones`, `cupones`, `redenciones` | Menú Métricas en [`Pantalla 3`](./05-prototipos-iniciales.md#pantalla-3--cu-07--creación-de-promoción-locatario) |
+| **RF20** | `CU-12` Consultar analítica de conversión y auditoría | [`Actividad CU-10 (Rama paralela B)`](./01-diagrama-actividad-cu10-redencion.svg) | [`Plantilla CU-10 (Paso 5)`](./02-plantillas-extendidas-casos-uso.md#plantilla-3--cu-10--redimir-cupón-de-descuento-en-caja) | `Redencion`, `RegistroAuditoria`, `Cajero` | `redenciones`, `auditoria_logs`, `usuarios` | Nota de registro en [`Pantalla 4`](./05-prototipos-iniciales.md#pantalla-4--cu-10--validador-de-caja-cajero) |
+
+---
+
+## 2. Resultado de Cobertura
+
+* **Total de Requisitos Funcionales trazados:** **20 de 20 (100%)**.
+* **Total de Clases Conceptuales utilizadas:** **12 de 12 (100%)**.
+* **Total de Entidades del MER cubiertas:** **11 de 11 (100%)**.
+* **Total de Pantallas Críticas vinculadas:** **4 de 4 (100%, sin pantallas huérfanas)**.

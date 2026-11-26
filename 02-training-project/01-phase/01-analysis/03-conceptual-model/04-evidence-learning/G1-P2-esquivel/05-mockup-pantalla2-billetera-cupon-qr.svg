@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 760" width="100%" height="100%" style="background:#f1f5f9; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Rótulo de Caso de Uso -->
+  <rect x="10" y="10" width="400" height="44" rx="8" fill="#0f172a" />
+  <text x="210" y="29" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#4ade80">PANTALLA 2 · ATIENDE: CU-05 y CU-06</text>
+  <text x="210" y="45" text-anchor="middle" font-size="10.5" fill="#e2e8f0">Billetera Digital y Cupón QR con Temporizador (Visitante)</text>
+
+  <!-- Marco del Celular -->
+  <rect x="25" y="66" width="370" height="675" rx="28" fill="#ffffff" stroke="#334155" stroke-width="4" filter="url(#shadow)" />
+  <rect x="155" y="76" width="110" height="12" rx="6" fill="#e2e8f0" />
+
+  <!-- Encabezado -->
+  <rect x="35" y="100" width="350" height="54" rx="10" fill="#16a34a" />
+  <text x="54" y="133" font-size="16" font-weight="bold" fill="#ffffff">Mis Cupones · Billetera Nuvora</text>
+
+  <!-- Pestañas (CU-06 / RF15) -->
+  <rect x="42" y="166" width="108" height="32" rx="8" fill="#0f172a" />
+  <text x="96" y="186" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Activos (1)</text>
+  <rect x="156" y="166" width="108" height="32" rx="8" fill="#e2e8f0" />
+  <text x="210" y="186" text-anchor="middle" font-size="11" fill="#475569">Canjeados (3)</text>
+  <rect x="270" y="166" width="108" height="32" rx="8" fill="#e2e8f0" />
+  <text x="324" y="186" text-anchor="middle" font-size="11" fill="#475569">Vencidos (1)</text>
+
+  <!-- Tarjeta Principal del Cupón Activo (CU-05 / RF13-14) -->
+  <rect x="42" y="212" width="336" height="456" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2" filter="url(#shadow)" />
+  <rect x="42" y="212" width="336" height="62" rx="12" fill="#f0fdf4" />
+  <text x="210" y="238" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">El Corralito Parrilla · Local P-14</text>
+  <text x="210" y="258" text-anchor="middle" font-size="12" fill="#14532d">Combo Burger Clásica · Paga $17.500 COP</text>
+
+  <!-- Temporizador Regresivo (RN-02: 2 horas) -->
+  <rect x="75" y="286" width="270" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" />
+  <text x="210" y="305" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#92400e">TIEMPO RESTANTE PARA RECLAMAR EN CAJA:</text>
+  <text x="210" y="325" text-anchor="middle" font-size="16" font-weight="bold" fill="#b45309">01 h : 48 m : 22 s</text>
+
+  <!-- Código QR Simulado -->
+  <rect x="120" y="348" width="180" height="180" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
+  <!-- Cuadrados esquineros del QR -->
+  <rect x="134" y="362" width="38" height="38" fill="none" stroke="#0f172a" stroke-width="6" />
+  <rect x="146" y="374" width="14" height="14" fill="#0f172a" />
+  <rect x="248" y="362" width="38" height="38" fill="none" stroke="#0f172a" stroke-width="6" />
+  <rect x="260" y="374" width="14" height="14" fill="#0f172a" />
+  <rect x="134" y="476" width="38" height="38" fill="none" stroke="#0f172a" stroke-width="6" />
+  <rect x="146" y="488" width="14" height="14" fill="#0f172a" />
+  <!-- Módulos centrales del QR -->
+  <rect x="188" y="366" width="14" height="14" fill="#0f172a" />
+  <rect x="212" y="382" width="18" height="18" fill="#0f172a" />
+  <rect x="182" y="410" width="22" height="22" fill="#0f172a" />
+  <rect x="218" y="418" width="28" height="16" fill="#0f172a" />
+  <rect x="144" y="422" width="20" height="28" fill="#0f172a" />
+  <rect x="188" y="452" width="30" height="20" fill="#0f172a" />
+  <rect x="244" y="446" width="24" height="26" fill="#0f172a" />
+  <rect x="200" y="490" width="22" height="22" fill="#0f172a" />
+  <rect x="244" y="490" width="32" height="16" fill="#0f172a" />
+
+  <!-- Código Alfanumérico de Respaldo -->
+  <text x="210" y="554" text-anchor="middle" font-size="11" fill="#475569">Código de respaldo para dictar al cajero:</text>
+  <rect x="105" y="564" width="210" height="38" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" />
+  <text x="210" y="589" text-anchor="middle" font-size="17" font-weight="bold" letter-spacing="2" fill="#0f172a">SPP-7F2A9B</text>
+
+  <!-- Aviso de Estado -->
+  <rect x="85" y="616" width="250" height="32" rx="16" fill="#dcfce7" />
+  <text x="210" y="636" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#166534">ESTADO: EMITIDO · Válido 1 uso</text>
+
+  <!-- Barra de navegación -->
+  <rect x="35" y="684" width="350" height="46" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="105" y="711" text-anchor="middle" font-size="11" fill="#64748b">Explorar</text>
+  <text x="210" y="711" text-anchor="middle" font-size="11" font-weight="bold" fill="#16a34a">Mis Cupones</text>
+  <text x="315" y="711" text-anchor="middle" font-size="11" fill="#64748b">Mi Cuenta</text>
+</svg>
