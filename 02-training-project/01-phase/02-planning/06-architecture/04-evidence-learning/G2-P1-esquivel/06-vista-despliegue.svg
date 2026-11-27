@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="680" viewBox="0 0 1900 680">
+<defs>
+  <marker id="arr_net" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/></marker>
+</defs>
+<rect width="1900" height="680" fill="#FFFFFF"/>
+<rect x="20" y="14" width="1860" height="42" rx="8" fill="#0F172A"/>
+<text x="950" y="41" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">A6 · Vista de Despliegue (Nuvora · 4 Nodos, Protocolos/Puertos y Seguridad en Red)</text>
+<path d="M 360 320 L 540 320" fill="none" stroke="#0F172A" stroke-width="2.2" marker-end="url(#arr_net)"/>
+<rect x="384" y="270" width="132" height="38" rx="6" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.1"/>
+<text x="450" y="286" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1D4ED8">HTTPS :443</text>
+<text x="450" y="302" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#334155">TLS 1.3 · JSON</text>
+<path d="M 900 320 L 1080 320" fill="none" stroke="#0F172A" stroke-width="2.2" marker-end="url(#arr_net)"/>
+<rect x="924" y="270" width="132" height="38" rx="6" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.1"/>
+<text x="990" y="286" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1D4ED8">TCP/TLS :5432</text>
+<text x="990" y="302" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Red Privada</text>
+<path d="M 1410 320 L 1575 320" fill="none" stroke="#0F172A" stroke-width="2.2" marker-end="url(#arr_net)"/>
+<rect x="1426" y="270" width="132" height="38" rx="6" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.1"/>
+<text x="1492" y="286" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1D4ED8">SFTP :22</text>
+<text x="1492" y="302" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Backup Cifrado</text>
+<polygon points="40,110 52,98 372,98 360,110" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.4"/>
+<polygon points="360,110 372,98 372,518 360,530" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.4"/>
+<rect x="40" y="110" width="320" height="420" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="40" y="110" width="320" height="52" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.4"/>
+<text x="200" y="130" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-style="italic" fill="#334155">&lt;&lt;device&gt;&gt; Nodo Cliente</text>
+<text x="200" y="151" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0F172A">Navegador Móvil / Terminal Caja</text>
+<rect x="56" y="182" width="288" height="78" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
+<text x="200" y="210" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">AppWebVisitanteLocatario</text>
+<text x="200" y="234" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#475569">PWA React / Next.js · Visitante y Locatario</text>
+<rect x="56" y="276" width="288" height="78" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
+<text x="200" y="304" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">ValidadorCajaUI</text>
+<text x="200" y="328" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#475569">Escáner QR + código manual (RNF05, RNF08)</text>
+<text x="200" y="512" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0F172A">Sin acceso directo a Base de Datos</text>
+<polygon points="540,110 552,98 912,98 900,110" fill="#D1FAE5" stroke="#059669" stroke-width="1.4"/>
+<polygon points="900,110 912,98 912,518 900,530" fill="#D1FAE5" stroke="#059669" stroke-width="1.4"/>
+<rect x="540" y="110" width="360" height="420" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+<rect x="540" y="110" width="360" height="52" fill="#D1FAE5" stroke="#059669" stroke-width="1.4"/>
+<text x="720" y="130" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-style="italic" fill="#334155">&lt;&lt;executionEnvironment&gt;&gt;</text>
+<text x="720" y="151" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0F172A">Nodo Servidor de Aplicación</text>
+<rect x="556" y="182" width="328" height="78" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.2"/>
+<text x="720" y="210" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">ServicioAutenticacionSeguridad</text>
+<text x="720" y="234" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#475569">API Node.js / TS · Hash y sal + RBAC</text>
+<rect x="556" y="276" width="328" height="78" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.2"/>
+<text x="720" y="304" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">ServicioCatalogoPromociones</text>
+<text x="720" y="328" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#475569">Motor filtro $COP + Estrategias horarias</text>
+<rect x="556" y="370" width="328" height="78" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.2"/>
+<text x="720" y="398" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">MotorCuponesCanje</text>
+<text x="720" y="422" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#475569">FachadaCanjeMostrador + Reloj NTP (RNF01)</text>
+<text x="720" y="512" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0F172A">Pool persistente hacia subred privada de datos</text>
+<polygon points="1080,110 1092,98 1422,98 1410,110" fill="#FEF3C7" stroke="#D97706" stroke-width="1.4"/>
+<polygon points="1410,110 1422,98 1422,518 1410,530" fill="#FEF3C7" stroke="#D97706" stroke-width="1.4"/>
+<rect x="1080" y="110" width="330" height="420" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+<rect x="1080" y="110" width="330" height="52" fill="#FEF3C7" stroke="#D97706" stroke-width="1.4"/>
+<text x="1245" y="130" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-style="italic" fill="#334155">&lt;&lt;database&gt;&gt; Red Privada</text>
+<text x="1245" y="151" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0F172A">Nodo Base de Datos PostgreSQL</text>
+<rect x="1096" y="182" width="298" height="78" rx="6" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/>
+<text x="1245" y="210" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">nuvora_db (11 Tablas 3FN)</text>
+<text x="1245" y="234" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#475569">PK, FK, UNIQUE, CHECK, índices B-Tree</text>
+<rect x="1096" y="276" width="298" height="78" rx="6" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/>
+<text x="1245" y="304" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Control Concurrencia (RNF04)</text>
+<text x="1245" y="328" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#475569">SELECT FOR UPDATE + auditoria_logs</text>
+<text x="1245" y="512" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0F172A">Firewall cerrado a Internet (puerto 5432 interno)</text>
+<polygon points="1575,145 1587,133 1867,133 1855,145" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.4"/>
+<polygon points="1855,145 1867,133 1867,483 1855,495" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.4"/>
+<rect x="1575" y="145" width="280" height="350" fill="#FEF2F2" stroke="#DC2626" stroke-width="2"/>
+<rect x="1575" y="145" width="280" height="52" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.4"/>
+<text x="1715" y="165" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-style="italic" fill="#334155">&lt;&lt;storage&gt;&gt; Externo</text>
+<text x="1715" y="186" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0F172A">Nodo Respaldo Cifrado</text>
+<rect x="1591" y="217" width="248" height="78" rx="6" fill="#FFFFFF" stroke="#DC2626" stroke-width="1.2"/>
+<text x="1715" y="245" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Respaldos Diarios AES-256</text>
+<text x="1715" y="269" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#475569">pg_dump programado 2:00 a. m.</text>
+<rect x="1591" y="311" width="248" height="78" rx="6" fill="#FFFFFF" stroke="#DC2626" stroke-width="1.2"/>
+<text x="1715" y="339" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Restauración (RNF06)</text>
+<text x="1715" y="363" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" fill="#475569">Prueba mensual verificada con acta</text>
+<text x="1715" y="477" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0F172A">Almacenamiento externo aislado</text>
+<rect x="40" y="595" width="1820" height="42" rx="6" fill="#F8FAFC" stroke="#94A3B8"/>
+<text x="950" y="621" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#0F172A">Seguridad de red y disponibilidad: Cliente (HTTPS 443) -&gt; Aplicación -&gt; Datos en subred privada (TCP/TLS 5432, sin IP pública) -&gt; Respaldo cifrado diario (SFTP 22).</text>
+</svg>

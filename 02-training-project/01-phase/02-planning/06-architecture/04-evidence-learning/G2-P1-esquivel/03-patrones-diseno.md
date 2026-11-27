@@ -28,4 +28,4 @@ La rúbrica exige incorporar **al menos 2 patrones de diseño GoF distintos** re
 ## 3. Verificación en el Diagrama de Clases (`A2`)
 
 * **Estrategia en [`02-diagrama-clases.svg`](./02-diagrama-clases.svg):** Visible mediante la interfaz `<<interface>> IEstrategiaVigencia`, las dos flechas de realización (`<|..`) desde `VigenciaHorarioRegular` y `VigenciaFranjaRelampago`, y la dependencia desde `Promocion` / `FachadaCanjeMostrador`.
-* **Fachada en [`02-diagrama-clases.svg`](./02-diagrama-clases.svg):** Visible mediante `FachadaCanjeMostrador` enlazando por asociación/dependencia dirigida hacia `Cajero`, `Cupon`, `IEstrategiaVigencia`, `Redencion` y `RegistroAuditoria`, centralizando el caso de uso crítico `CU-10`.
+* **Fachada en [`02-diagrama-clases.svg`](./02-diagrama-clases.svg):** Visible mediante `FachadaCanjeMostrador` conectando directamente hacia `IEstrategiaVigencia`, `Cajero` y `Cupon` (los cuales encadenan el flujo hacia `Redencion` y `RegistroAuditoria`), centralizando el caso de uso crítico `CU-10`.

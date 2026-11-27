@@ -16,13 +16,13 @@
 
 ## 2. Decisiones de Diseño Orientado a Objetos (Rúbrica G2 · Criterio 2)
 
-El diagrama evoluciona las 12 clases conceptuales del Modelo de Dominio (`G1-P2/03-modelo-dominio.md`) hacia **15 clases/interfaces de diseño** en TypeScript, respetando **alta cohesión** y **bajo acoplamiento**:
+El diagrama evoluciona las 12 clases conceptuales del Modelo de Dominio (`G1-P2/03-modelo-dominio.md`) hacia **16 clases/interfaces de diseño** en TypeScript, respetando **alta cohesión** y **bajo acoplamiento**:
 
 1. **Separación estricta de responsabilidades (Regla 5 de `Rubricas_G2.md`):** Ninguna clase mezcla interfaz gráfica, lógica de negocio, persistencia ni reportes. Las entidades (`Usuario`, `Promocion`, `Cupon`, `Redencion`, etc.) encapsulan estado y reglas puras del negocio; la coordinación transaccional recae en `FachadaCanjeMostrador`.
-2. **Generalización / Herencia (`«es un»`):** `Usuario` es clase abstracta padre con atributos comunes (`-id: UUID`, `-nombreCompleto: string`, `-correo: string`, `-hashContrasena: string`, `-salContrasena: string`, `-estadoCuenta: string`) y los métodos `+autenticar(clavePlana: string): boolean` y `+cambiarEstado(nuevoEstado: string): void`. De ella heredan `Visitante`, `Locatario` y `Cajero`, evitando duplicar credenciales o autenticación en tres clases.
+2. **Generalización / Herencia (`«es un»`):** `Usuario` es clase abstracta padre con atributos comunes (`-id: UUID`, `-nombreCompleto: string`, `-correo: string`, `-hashContrasena: string`, `-salContrasena: string`, `-estadoCuenta: string`) y los métodos `+autenticar(clave: string): boolean` y `+actualizarAcceso(): void`. De ella heredan `Visitante`, `Locatario` y `Cajero`, evitando duplicar credenciales o autenticación en tres clases.
 3. **Composición (`«es parte de»`):** `Promocion` (`1`) contiene por composición (`◆──`) de `0..*` instancias de `FranjaHoraria`. Si una promoción es eliminada, sus franjas horarias dejan de existir en el dominio.
 4. **Polimorfismo por Interfaz (`≥ 2` implementaciones):** La interfaz `<<interface>> IEstrategiaVigencia` define `+esVigenteAhora(promo: Promocion, fechaServidor: Date): boolean` con dos implementaciones concretas: `VigenciaHorarioRegular` y `VigenciaFranjaRelampago`. Así, `FachadaCanjeMostrador` evalúa la vigencia sin condicionales rígidos por tipo de campaña (Patrón **Estrategia**).
-5. **Orquestación Desacoplada:** `FachadaCanjeMostrador` (Patrón **Fachada**) expone una única operación `+procesarCanje(codigo: string, cajero: Cajero, ipCliente: string): ResultadoCanje` que coordina la validación del `Cupon` (`CU-11`), el cambio atómico de estado (`RN-04`), la creación de `Redencion` (`CU-10`) y la escritura de `RegistroAuditoria` (`RF20`).
+5. **Orquestación Desacoplada:** `FachadaCanjeMostrador` (Patrón **Fachada**) expone una única operación `+procesarCanje(codigo: string, cajero: Cajero, ip: string): string` que coordina la validación del `Cupon` (`CU-11`), el cambio atómico de estado (`RN-04`), la creación de `Redencion` (`CU-10`) y la escritura de `RegistroAuditoria` (`RF20`).
 
 ---
 
