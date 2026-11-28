@@ -33,7 +33,7 @@
 | **A7. Matriz de trazabilidad** | [`07-matriz-trazabilidad.md`](./07-matriz-trazabilidad.md) | `G1-P2-esquivel/09-matriz-trazabilidad.md` (base de requisitos y tablas) | Se adaptó al cruce bidireccional Análisis $\leftrightarrow$ Diseño cubriendo 20/20 RF, 10/10 RNF, 16/16 clases y 11/11 tablas sin elementos huérfanos. |
 
 **Qué reutilicé (resumen en 3 a 5 líneas):**
-Reutilicé la especificación completa de requisitos (`20 RF` y `10 RNF`), actores (`Visitante`, `Locatario`, `Cajero`) y reglas de negocio (`RN-01` a `RN-07`) de `G1-P1-esquivel/`, junto con las 12 clases conceptuales del modelo de dominio de `G1-P2-esquivel/` y los antecedentes iniciales de `03-execute/` (`09-week` y `14-week`).
+Reutilicé la especificación completa de requisitos (`20 RF` y `10 RNF`), actores (`Visitante`, `Locatario`, `Cajero`, `Superadministrador` / `ADMINISTRADOR`) y reglas de negocio (`RN-01` a `RN-07`) de `G1-P1-esquivel/`, junto con las 12 clases conceptuales del modelo de dominio de `G1-P2-esquivel/` y los antecedentes iniciales de `03-execute/` (`09-week` y `14-week`).
 
 **Qué ajusté para llevarlo al estándar de la rúbrica (resumen en 3 a 5 líneas):**
 Transformé las clases conceptuales del dominio en clases de diseño OO con visibilidad, tipos de datos y firmas de métodos; justifiqué la plataforma TypeScript/Node.js y PostgreSQL con condiciones reales de San Pedro Plaza; y reubiqué todas las rutas y multiplicidades en `.drawio` y `.svg` para lograr cero cruces de líneas.
@@ -57,8 +57,8 @@ Construí desde cero la aplicación de los dos patrones GoF (`Estrategia` y `Fac
 
 | Día | Qué avancé (mensaje del commit) |
 |---|---|
-| **Día 1 · Jueves 26 de noviembre de 2026** | `89f1956` — `docs(G2-P1): ficha plataforma, diagrama de clases, patrones GoF y arquitectura Nuvora` (entrega de A1, A2, A3 y A4 con diagramas `.drawio` y `.svg` sin cruces). |
-| **Día 2 · Viernes 27 de noviembre de 2026** | Entrega de Tanda 2 (`A5` Vista de componentes, `A6` Vista de despliegue, `A7` Matriz de trazabilidad bidireccional y este `README.md` diligenciado). |
+| **Día 1 · Jueves 26 de noviembre de 2026** | [`89f1956`](https://github.com/edwin-esquivel-ADSO/ADSO-3413974/commit/89f1956) — `docs(G2-P1): ficha plataforma, diagrama de clases, patrones GoF y arquitectura Nuvora` (entrega de A1, A2, A3 y A4 con diagramas `.drawio` y `.svg` sin cruces). |
+| **Día 2 · Viernes 27 de noviembre de 2026** | [`76e0c3d`](https://github.com/edwin-esquivel-ADSO/ADSO-3413974/commit/76e0c3d) — `docs(G2-P1): vista componentes, vista despliegue, matriz trazabilidad, ajustes A2/A3 y README` + pulido final de anchos de cajas sin desbordes, coherencia `RF19` y rol `ADMINISTRADOR`. |
 
 ## 6. Uso de inteligencia artificial (declaración obligatoria)
 

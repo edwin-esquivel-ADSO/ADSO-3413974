@@ -17,7 +17,7 @@ Aunque el mínimo exigible de la rúbrica es de 8 requisitos funcionales, este d
 | ID | Módulo | Descripción Corta del Requisito | Caso de Uso Origen (`G1-P1`) | Prioridad de Diseño |
 | :---: | :--- | :--- | :--- | :---: |
 | **RF01** | Acceso y Seguridad | Registro de visitantes con nombre, correo único y contraseña almacenada de forma segura (`hash y sal`). | `CU-01` | Alta |
-| **RF02** | Acceso y Seguridad | Autenticación de usuarios por credenciales y asignación de sesión según su rol (`Visitante`, `Locatario`, `Cajero`). | `CU-02` | Crítica |
+| **RF02** | Acceso y Seguridad | Autenticación de usuarios por credenciales y asignación de sesión según su rol (`Visitante`, `Locatario`, `Cajero`, `Administrador`). | `CU-02` | Crítica |
 | **RF03** | Acceso y Seguridad | Solicitud de restablecimiento de contraseña mediante enlace temporal enviado al correo registrado. | `CU-02` | Media |
 | **RF04** | Acceso y Seguridad | Actualización del perfil público del local comercial (nombre, número de local, teléfono, horario y logo). | `CU-09` | Media |
 | **RF05** | Directorio y Presupuesto | Listado organizado de comercios clasificados en una o varias categorías del centro comercial. | `CU-03` | Alta |
@@ -58,6 +58,8 @@ Aunque el mínimo exigible de la rúbrica es de 8 requisitos funcionales, este d
   1. **Visitante:** Consumidor en el centro comercial que consulta el catálogo, filtra por presupuesto, solicita cupones QR y revisa su billetera.
   2. **Locatario:** Administrador autorizado de un local comercial que actualiza el perfil del negocio, publica productos/promociones con franjas horarias y revisa métricas.
   3. **Cajero:** Operador de mostrador asignado a un único local comercial que valida y redime cupones en tiempo real.
+* **Actor administrativo y de auditoría (4.º rol en catálogo `roles`):**
+  4. **Administrador (`ADMINISTRADOR` / Superadministrador en `G1-P1`):** Gestor del centro comercial encargado de supervisar catálogo, cuentas y bitácora inmutable de auditoría (`CU-12`, `RF20`, matriz de seguridad `G2-P2/B6`).
 * **Restricciones del caso:**
   * **Alcance funcional delimitado:** No existen domicilios ni pasarelas de cobro electrónico; el descuento se aplica presencialmente en caja.
   * **Infraestructura acotada:** Equipo formativo de 3 integrantes con presupuesto mínimo; requiere despliegue web ligero sin necesidad de aplicaciones móviles nativas separadas por tienda (iOS/Android).

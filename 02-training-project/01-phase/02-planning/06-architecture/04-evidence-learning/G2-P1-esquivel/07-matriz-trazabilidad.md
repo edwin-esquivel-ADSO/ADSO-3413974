@@ -12,7 +12,7 @@
 | ID | Requisito Funcional (`G1-P1`) | Clase(s) de Diseño (`A2`) | Tabla(s) de Datos (`B2`) | Componente(s) (`A5`) | Decisión / Patrón Aplicado |
 | :-: | :--- | :--- | :--- | :--- | :--- |
 | **RF01** | Registro de visitantes y autorización | `Usuario`, `Visitante` | `roles`, `usuarios` | `ServicioAutenticacionSeguridad`, `AppWebVisitanteLocatario` | Herencia `Usuario`; **hash y sal** + campo `autoriza_datos` |
-| **RF02** | Autenticación segura por rol | `Usuario`, `Visitante`, `Locatario`, `Cajero` | `roles`, `usuarios` | `ServicioAutenticacionSeguridad` | Control `RBAC` en capa lógica + tabla única con `rol_id` |
+| **RF02** | Autenticación segura por rol | `Usuario`, `Visitante`, `Locatario`, `Cajero` *(y rol `ADMINISTRADOR`)* | `roles`, `usuarios` | `ServicioAutenticacionSeguridad` | Control `RBAC` en capa lógica + tabla `roles` (`4` roles) con `rol_id` |
 | **RF03** | Restablecimiento de contraseña | `Usuario` | `usuarios`, `auditoria_logs` | `ServicioAutenticacionSeguridad` | Validación en servidor y traza en auditoría |
 | **RF04** | Gestión de perfil del local | `Locatario`, `LocalComercial` | `locales` | `ServicioCatalogoPromociones`, `AppWebVisitanteLocatario` | Verificación de pertenencia `Locatario.localId` |
 | **RF05** | Directorio por categorías | `LocalComercial`, `Categoria` | `locales`, `categorias`, `locales_categorias` | `ServicioCatalogoPromociones`, `AppWebVisitanteLocatario` | Relación `N:M` normalizada con `es_categoria_principal` |
@@ -29,7 +29,7 @@
 | **RF16** | Pantalla ágil en caja (cámara + manual) | `Cajero`, `FachadaCanjeMostrador` | `usuarios` | `ValidadorCajaUI`, `MotorCuponesCanje` | **Patrón Fachada** (`ICanjeMostrador`) + `metodo_validacion` |
 | **RF17** | Validación de local, estado y vigencia (`CU-11`) | `FachadaCanjeMostrador`, `Cajero`, `Cupon`, `Promocion`, `IEstrategiaVigencia` | `cupones`, `promociones`, `horarios_promocion`, `locales` | `MotorCuponesCanje`, `ServicioCatalogoPromociones` | **Fachada + Estrategia** contra reloj oficial del servidor |
 | **RF18** | Marcación atómica de canje y aviso verde/rojo | `FachadaCanjeMostrador`, `Cupon`, `Redencion` | `cupones`, `redenciones` | `MotorCuponesCanje`, `ValidadorCajaUI` | Bloqueo `SELECT FOR UPDATE` + `redenciones.cupon_id UNIQUE` (`1:1`) |
-| **RF19** | Analítica de conversión para locatario | `Locatario`, `Promocion`, `Cupon`, `Redencion` | `promociones`, `cupones`, `redenciones` | `ServicioCatalogoPromociones`, `AppWebVisitanteLocatario` | Agregaciones relacionales por `local_id` |
+| **RF19** | Analítica de conversión para locatario | `Locatario`, `Promocion`, `Cupon`, `Redencion` | `promociones`, `cupones`, `redenciones` | `ServicioCatalogoPromociones`, `AppWebVisitanteLocatario` | Consulta de solo lectura vía `ICatalogo` por `local_id` (sin reportes en entidades) |
 | **RF20** | Registro inmutable de auditoría | `FachadaCanjeMostrador`, `Cajero`, `Redencion`, `RegistroAuditoria` | `redenciones`, `auditoria_logs`, `usuarios` | `MotorCuponesCanje`, `CapaAccesoDatosAuditoria` | Tabla `auditoria_logs` de solo inserción (`INSERT`) |
 
 ---
