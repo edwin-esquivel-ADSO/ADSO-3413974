@@ -2,7 +2,7 @@
 
 **Programa de Formación:** Análisis y Desarrollo de Software (ADSO) — Ficha 3413974  
 **Proyecto Formativo:** Nuvora — Centro Comercial San Pedro Plaza (Neiva)  
-**Autor:** Edwin Alejandro Esquivel Bahamón (`edwin-esquivel-ADSO`)  
+**Autor:** `edwin-esquivel-ADSO`  
 **Guía 1:** Modelo Conceptual (Análisis) — **Producto 2:** Modelo de Análisis y Verificación (G1-P2)  
 
 ---

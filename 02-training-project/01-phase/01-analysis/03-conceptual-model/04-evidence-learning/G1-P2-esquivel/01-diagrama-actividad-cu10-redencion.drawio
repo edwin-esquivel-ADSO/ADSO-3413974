@@ -63,8 +63,8 @@
         <mxCell id="s_err" value="Liberar bloqueo y mostrar&#xa;aviso rojo con motivo exacto" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;strokeWidth=1.8;fontSize=11;fontColor=#991b1b;fontStyle=1;" vertex="1" parent="lane_sys">
           <mxGeometry x="25" y="290" width="200" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="lbl_fork" value="Bifurcación paralela (ejecuta ambas tareas a la vez)" style="text;html=1;fontStyle=1;fontSize=9.5;fontColor=#0f172a;align=center;" vertex="1" parent="lane_sys">
-          <mxGeometry x="85" y="348" width="320" height="20" as="geometry" />
+        <mxCell id="lbl_fork" value="Bifurcación paralela (ejecuta ambas tareas a la vez)" style="text;html=1;fontStyle=1;fontSize=9.5;fontColor=#0f172a;align=left;" vertex="1" parent="lane_sys">
+          <mxGeometry x="30" y="348" width="290" height="20" as="geometry" />
         </mxCell>
         <mxCell id="s_fork" value="" style="rounded=1;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="lane_sys">
           <mxGeometry x="85" y="370" width="320" height="7" as="geometry" />

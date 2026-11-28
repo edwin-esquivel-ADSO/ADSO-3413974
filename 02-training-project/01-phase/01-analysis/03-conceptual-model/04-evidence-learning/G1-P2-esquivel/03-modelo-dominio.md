@@ -2,7 +2,7 @@
 
 **Programa de Formación:** Análisis y Desarrollo de Software (ADSO) — Ficha 3413974  
 **Proyecto Formativo:** Nuvora — Centro Comercial San Pedro Plaza (Neiva)  
-**Autor:** Edwin Alejandro Esquivel Bahamón (`edwin-esquivel-ADSO`)  
+**Autor:** `edwin-esquivel-ADSO`  
 **Guía 1:** Modelo Conceptual (Análisis) — **Producto 2:** Modelo de Análisis y Verificación (G1-P2)  
 
 ---
@@ -16,7 +16,7 @@ Conforme a las reglas de arbitraje de la guía (Sección 7.5), este modelo repre
 
 ---
 
-## 2. Catálogo de Clases Conceptuales (11 Clases del Negocio)
+## 2. Catálogo de Clases Conceptuales (12 Clases del Negocio)
 
 | # | Clase Conceptual | Rol en el Negocio Nuvora | Atributos de Negocio Representados |
 | :---: | :--- | :--- | :--- |
