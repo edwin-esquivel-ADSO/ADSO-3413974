@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1660" height="1120" viewBox="0 0 1660 1120">
+<svg xmlns="http://www.w3.org/2000/svg" width="2250" height="1180" viewBox="0 0 2250 1180">
 <defs>
   <marker id="cf_one" viewBox="0 0 16 14" refX="15" refY="7" markerWidth="14" markerHeight="12" orient="auto-start-reverse">
     <line x1="8" y1="1" x2="8" y2="13" stroke="#1E293B" stroke-width="1.8"/>
@@ -19,187 +19,217 @@
     <line x1="10" y1="7" x2="19" y2="7" stroke="#1E293B" stroke-width="1.8"/>
   </marker>
 </defs>
-<rect width="1660" height="1120" fill="#FFFFFF"/>
-<rect x="20" y="14" width="1620" height="40" rx="8" fill="#0F172A"/>
-<text x="830" y="40" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">B2 · Modelo Lógico Relacional 3FN (Nuvora · 11 Tablas · Notación Pata de Gallo y Multiplicidades)</text>
-<path d="M 285 130 L 365 130" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="279" y="120" width="92" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="325" y="132" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (rol_id)</text>
-<text x="301" y="123" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="327" y="123" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 760 150 L 680 150" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_zero_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="658" y="140" width="124" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="720" y="152" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">0..1:N (local_id)</text>
-<text x="722" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..1</text>
-<text x="694" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 1065 135 L 1135 135" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="1048" y="125" width="105" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="1100" y="137" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (local_id)</text>
-<text x="1081" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="1097" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 1445 135 L 1410 135" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="1362" y="125" width="131" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="1427" y="137" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (categoria_id)</text>
-<text x="1407" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="1424" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 1065 210 L 1315 210 L 1315 385" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="1138" y="200" width="105" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="1190" y="212" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (local_id)</text>
-<text x="1081" y="203" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="1325" y="375" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 915 253 L 915 420" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="862" y="326" width="105" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="915" y="338" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (local_id)</text>
-<text x="925" y="271" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="925" y="410" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 1160 505 L 1080 505" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="1058" y="495" width="124" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="1120" y="507" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (producto_id)</text>
-<text x="1122" y="498" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="1094" y="498" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 915 642 L 915 775" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="872" y="698" width="86" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="915" y="710" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N CASCADE</text>
-<text x="925" y="660" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="925" y="765" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 760 520 L 670 520" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="650" y="510" width="131" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="715" y="522" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (promocion_id)</text>
-<text x="722" y="513" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="684" y="513" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 520 307 L 520 430" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="461" y="358" width="118" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="520" y="370" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (usuario_id)</text>
-<text x="530" y="325" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="530" y="420" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 520 598 L 520 735" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_one)"/>
-<rect x="458" y="656" width="124" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="520" y="668" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:1 (cupon_id UQ)</text>
-<text x="530" y="616" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="530" y="725" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..1</text>
-<path d="M 365 250 L 335 250 L 335 795 L 365 795" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="279" y="512" width="112" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="335" y="524" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (cajero_id)</text>
-<text x="327" y="243" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="327" y="788" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 1010 253 L 1010 360 L 715 360 L 715 920 L 675 920" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="810" y="350" width="105" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="862" y="362" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (local_id)</text>
-<text x="1020" y="271" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="689" y="913" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 365 210 L 175 210 L 175 735" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="211" y="200" width="118" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="270" y="212" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (usuario_id)</text>
-<text x="327" y="203" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
-<text x="185" y="725" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<path d="M 365 835 L 315 835" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_zero_one)" marker-end="url(#cf_zero_many)"/>
-<rect x="265" y="825" width="150" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
-<text x="340" y="837" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">0..1:N (redencion_id)</text>
-<text x="327" y="828" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..1</text>
-<text x="329" y="828" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
-<rect x="45" y="85" width="240" height="96" rx="6" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
-<rect x="45" y="85" width="240" height="30" rx="6" fill="#E2E8F0" stroke="#334155" stroke-width="1.5"/>
-<text x="165" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">roles</text>
-<text x="55" y="133" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: INTEGER</text>
-<text x="55" y="151" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">UQ nombre: VARCHAR(30)</text>
-<text x="55" y="169" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">descripcion: VARCHAR(150)</text>
-<rect x="365" y="85" width="315" height="222" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
-<rect x="365" y="85" width="315" height="30" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
-<text x="522" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">usuarios</text>
-<text x="375" y="133" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
-<text x="375" y="151" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK rol_id: INTEGER</text>
-<text x="375" y="169" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK local_id: VARCHAR(36) NULL</text>
-<text x="375" y="187" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">nombre_completo: VARCHAR(120)</text>
-<text x="375" y="205" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">UQ correo: VARCHAR(120)</text>
-<text x="375" y="223" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">hash_contrasena: VARCHAR(255)</text>
-<text x="375" y="241" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">sal_contrasena: VARCHAR(64)</text>
-<text x="375" y="259" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">estado_cuenta: VARCHAR(20)</text>
-<text x="375" y="277" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">autoriza_datos: BOOLEAN</text>
-<text x="375" y="295" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_registro: TIMESTAMP</text>
-<rect x="760" y="85" width="305" height="168" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
-<rect x="760" y="85" width="305" height="30" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
-<text x="912" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">locales</text>
-<text x="770" y="133" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
-<text x="770" y="151" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">nombre_comercial: VARCHAR(100)</text>
-<text x="770" y="169" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">UQ numero_local: VARCHAR(20)</text>
-<text x="770" y="187" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">telefono_contacto: VARCHAR(20)</text>
-<text x="770" y="205" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">horario_atencion: VARCHAR(100)</text>
-<text x="770" y="223" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">logo_url: VARCHAR(255) NULL</text>
-<text x="770" y="241" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">estado_operativo: VARCHAR(20)</text>
-<rect x="1135" y="85" width="275" height="114" rx="6" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
-<rect x="1135" y="85" width="275" height="30" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
-<text x="1272" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">locales_categorias (N:M)</text>
-<text x="1145" y="133" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK,FK local_id: VARCHAR(36)</text>
-<text x="1145" y="151" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK,FK categoria_id: INTEGER</text>
-<text x="1145" y="169" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">es_categoria_principal: BOOLEAN</text>
-<text x="1145" y="187" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_asignacion: TIMESTAMP</text>
-<rect x="1445" y="85" width="185" height="96" rx="6" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
-<rect x="1445" y="85" width="185" height="30" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
-<text x="1538" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">categorias</text>
-<text x="1455" y="133" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: INTEGER</text>
-<text x="1455" y="151" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">UQ nombre_categoria: VARCHAR(60)</text>
-<text x="1455" y="169" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">icono: VARCHAR(80)</text>
-<rect x="1160" y="385" width="310" height="168" rx="6" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
-<rect x="1160" y="385" width="310" height="30" rx="6" fill="#E2E8F0" stroke="#334155" stroke-width="1.5"/>
-<text x="1315" y="405" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">productos</text>
-<text x="1170" y="433" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
-<text x="1170" y="451" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK local_id: VARCHAR(36)</text>
-<text x="1170" y="469" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">nombre_producto: VARCHAR(100)</text>
-<text x="1170" y="487" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">descripcion: VARCHAR(300)</text>
-<text x="1170" y="505" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">precio_regular: NUMERIC(10,2)</text>
-<text x="1170" y="523" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">foto_url: VARCHAR(255) NULL</text>
-<text x="1170" y="541" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">disponible: BOOLEAN</text>
-<rect x="760" y="420" width="320" height="222" rx="6" fill="#FFF7ED" stroke="#EA580C" stroke-width="2"/>
-<rect x="760" y="420" width="320" height="30" rx="6" fill="#FFEDD5" stroke="#EA580C" stroke-width="1.5"/>
-<text x="920" y="440" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">promociones</text>
-<text x="770" y="468" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
-<text x="770" y="486" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK local_id: VARCHAR(36)</text>
-<text x="770" y="504" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK producto_id: VARCHAR(36)</text>
-<text x="770" y="522" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">titulo_oferta: VARCHAR(120)</text>
-<text x="770" y="540" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">precio_oferta: NUMERIC(10,2)</text>
-<text x="770" y="558" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">cupo_maximo: INTEGER</text>
-<text x="770" y="576" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">cupos_usados: INTEGER</text>
-<text x="770" y="594" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_inicio: TIMESTAMP</text>
-<text x="770" y="612" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_fin: TIMESTAMP</text>
-<text x="770" y="630" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">estado: VARCHAR(20)</text>
-<rect x="760" y="775" width="310" height="132" rx="6" fill="#FFF7ED" stroke="#C2410C" stroke-width="2"/>
-<rect x="760" y="775" width="310" height="30" rx="6" fill="#FED7AA" stroke="#C2410C" stroke-width="1.5"/>
-<text x="915" y="795" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">horarios_promocion (Débil)</text>
-<text x="770" y="823" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
-<text x="770" y="841" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK promocion_id: VARCHAR(36) [CASCADE]</text>
-<text x="770" y="859" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">dia_semana: INTEGER</text>
-<text x="770" y="877" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">hora_inicio: VARCHAR(5)</text>
-<text x="770" y="895" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">hora_fin: VARCHAR(5)</text>
-<rect x="365" y="430" width="305" height="168" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
-<rect x="365" y="430" width="305" height="30" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
-<text x="518" y="450" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">cupones</text>
-<text x="375" y="478" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
-<text x="375" y="496" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK promocion_id: VARCHAR(36)</text>
-<text x="375" y="514" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK usuario_id: VARCHAR(36)</text>
-<text x="375" y="532" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">UQ codigo_unico: VARCHAR(16)</text>
-<text x="375" y="550" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_emision: TIMESTAMP</text>
-<text x="375" y="568" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_expiracion: TIMESTAMP</text>
-<text x="375" y="586" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">estado: VARCHAR(20)</text>
-<rect x="365" y="735" width="310" height="168" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
-<rect x="365" y="735" width="310" height="30" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
-<text x="520" y="755" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">redenciones</text>
-<text x="375" y="783" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
-<text x="375" y="801" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK,UQ cupon_id: VARCHAR(36) [1:1]</text>
-<text x="375" y="819" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK cajero_id: VARCHAR(36)</text>
-<text x="375" y="837" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK local_id: VARCHAR(36)</text>
-<text x="375" y="855" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_hora_canje: TIMESTAMP</text>
-<text x="375" y="873" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">monto_descontado: NUMERIC(10,2)</text>
-<text x="375" y="891" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">metodo_validacion: VARCHAR(20)</text>
-<rect x="40" y="735" width="275" height="168" rx="6" fill="#FEF2F2" stroke="#DC2626" stroke-width="2"/>
-<rect x="40" y="735" width="275" height="30" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
-<text x="178" y="755" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">auditoria_logs</text>
-<text x="50" y="783" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
-<text x="50" y="801" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK usuario_id: VARCHAR(36)</text>
-<text x="50" y="819" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK redencion_id: VARCHAR(36) NULL</text>
-<text x="50" y="837" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">accion: VARCHAR(60)</text>
-<text x="50" y="855" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">detalle: VARCHAR(400)</text>
-<text x="50" y="873" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">ip_origen: VARCHAR(45)</text>
-<text x="50" y="891" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_registro: TIMESTAMP</text>
-<rect x="40" y="1064" width="1580" height="40" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1"/>
-<text x="830" y="1089" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#0F172A">Pata de Gallo (Crow's Foot): || (1 exacto) | |o (0 o 1) | o&lt; (0 o muchos) | |&lt; (1 o muchos) | Relación 1:1 en cupones-&gt;redenciones (cupon_id UNIQUE)</text>
+<rect width="2250" height="1180" fill="#FFFFFF"/>
+<rect x="20" y="14" width="2210" height="40" rx="8" fill="#0F172A"/>
+<text x="1125" y="40" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">B2 · Modelo Lógico Relacional 3FN (Nuvora · 11 Tablas · Notación Pata de Gallo y Multiplicidades)</text>
+<rect x="40" y="85" width="255" height="96" rx="6" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+<rect x="40" y="85" width="255" height="30" rx="6" fill="#E2E8F0" stroke="#334155" stroke-width="1.5"/>
+<text x="168" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">roles</text>
+<text x="50" y="133" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: INTEGER</text>
+<text x="50" y="151" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">UQ nombre: VARCHAR(30)</text>
+<text x="50" y="169" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">descripcion: VARCHAR(150)</text>
+<rect x="520" y="85" width="325" height="222" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="520" y="85" width="325" height="30" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="682" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">usuarios</text>
+<text x="530" y="133" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
+<text x="530" y="151" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK rol_id: INTEGER</text>
+<text x="530" y="169" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK local_id: VARCHAR(36) NULL</text>
+<text x="530" y="187" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">nombre_completo: VARCHAR(120)</text>
+<text x="530" y="205" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">UQ correo: VARCHAR(120)</text>
+<text x="530" y="223" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">hash_contrasena: VARCHAR(255)</text>
+<text x="530" y="241" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">sal_contrasena: VARCHAR(64)</text>
+<text x="530" y="259" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">estado_cuenta: VARCHAR(20)</text>
+<text x="530" y="277" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">autoriza_datos: BOOLEAN</text>
+<text x="530" y="295" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_registro: TIMESTAMP</text>
+<rect x="1025" y="85" width="320" height="168" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="1025" y="85" width="320" height="30" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+<text x="1185" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">locales</text>
+<text x="1035" y="133" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
+<text x="1035" y="151" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">nombre_comercial: VARCHAR(100)</text>
+<text x="1035" y="169" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">UQ numero_local: VARCHAR(20)</text>
+<text x="1035" y="187" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">telefono_contacto: VARCHAR(20)</text>
+<text x="1035" y="205" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">horario_atencion: VARCHAR(100)</text>
+<text x="1035" y="223" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">logo_url: VARCHAR(255) NULL</text>
+<text x="1035" y="241" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">estado_operativo: VARCHAR(20)</text>
+<rect x="1505" y="85" width="285" height="114" rx="6" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+<rect x="1505" y="85" width="285" height="30" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+<text x="1648" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">locales_categorias (N:M)</text>
+<text x="1515" y="133" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK,FK local_id: VARCHAR(36)</text>
+<text x="1515" y="151" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK,FK categoria_id: INTEGER</text>
+<text x="1515" y="169" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">es_categoria_principal: BOOLEAN</text>
+<text x="1515" y="187" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_asignacion: TIMESTAMP</text>
+<rect x="1955" y="85" width="255" height="96" rx="6" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+<rect x="1955" y="85" width="255" height="30" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+<text x="2082" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">categorias</text>
+<text x="1965" y="133" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: INTEGER</text>
+<text x="1965" y="151" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">UQ nombre_categoria: VARCHAR(60)</text>
+<text x="1965" y="169" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">icono: VARCHAR(80)</text>
+<rect x="1505" y="435" width="320" height="168" rx="6" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+<rect x="1505" y="435" width="320" height="30" rx="6" fill="#E2E8F0" stroke="#334155" stroke-width="1.5"/>
+<text x="1665" y="455" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">productos</text>
+<text x="1515" y="483" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
+<text x="1515" y="501" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK local_id: VARCHAR(36)</text>
+<text x="1515" y="519" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">nombre_producto: VARCHAR(100)</text>
+<text x="1515" y="537" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">descripcion: VARCHAR(300)</text>
+<text x="1515" y="555" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">precio_regular: NUMERIC(10,2)</text>
+<text x="1515" y="573" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">foto_url: VARCHAR(255) NULL</text>
+<text x="1515" y="591" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">disponible: BOOLEAN</text>
+<rect x="1025" y="435" width="325" height="222" rx="6" fill="#FFF7ED" stroke="#EA580C" stroke-width="2"/>
+<rect x="1025" y="435" width="325" height="30" rx="6" fill="#FFEDD5" stroke="#EA580C" stroke-width="1.5"/>
+<text x="1188" y="455" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">promociones</text>
+<text x="1035" y="483" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
+<text x="1035" y="501" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK local_id: VARCHAR(36)</text>
+<text x="1035" y="519" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK producto_id: VARCHAR(36)</text>
+<text x="1035" y="537" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">titulo_oferta: VARCHAR(120)</text>
+<text x="1035" y="555" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">precio_oferta: NUMERIC(10,2)</text>
+<text x="1035" y="573" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">cupo_maximo: INTEGER</text>
+<text x="1035" y="591" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">cupos_usados: INTEGER</text>
+<text x="1035" y="609" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_inicio: TIMESTAMP</text>
+<text x="1035" y="627" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_fin: TIMESTAMP</text>
+<text x="1035" y="645" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">estado: VARCHAR(20)</text>
+<rect x="1025" y="810" width="325" height="132" rx="6" fill="#FFF7ED" stroke="#C2410C" stroke-width="2"/>
+<rect x="1025" y="810" width="325" height="30" rx="6" fill="#FED7AA" stroke="#C2410C" stroke-width="1.5"/>
+<text x="1188" y="830" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">horarios_promocion (Débil)</text>
+<text x="1035" y="858" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
+<text x="1035" y="876" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK promocion_id: VARCHAR(36) [CASCADE]</text>
+<text x="1035" y="894" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">dia_semana: INTEGER</text>
+<text x="1035" y="912" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">hora_inicio: VARCHAR(5)</text>
+<text x="1035" y="930" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">hora_fin: VARCHAR(5)</text>
+<rect x="520" y="450" width="325" height="168" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+<rect x="520" y="450" width="325" height="30" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+<text x="682" y="470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">cupones</text>
+<text x="530" y="498" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
+<text x="530" y="516" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK promocion_id: VARCHAR(36)</text>
+<text x="530" y="534" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK usuario_id: VARCHAR(36)</text>
+<text x="530" y="552" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">UQ codigo_unico: VARCHAR(16)</text>
+<text x="530" y="570" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_emision: TIMESTAMP</text>
+<text x="530" y="588" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_expiracion: TIMESTAMP</text>
+<text x="530" y="606" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">estado: VARCHAR(20)</text>
+<rect x="520" y="775" width="325" height="168" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+<rect x="520" y="775" width="325" height="30" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+<text x="682" y="795" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">redenciones</text>
+<text x="530" y="823" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
+<text x="530" y="841" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK,UQ cupon_id: VARCHAR(36) [1:1]</text>
+<text x="530" y="859" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK cajero_id: VARCHAR(36)</text>
+<text x="530" y="877" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK local_id: VARCHAR(36)</text>
+<text x="530" y="895" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_hora_canje: TIMESTAMP</text>
+<text x="530" y="913" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">monto_descontado: NUMERIC(10,2)</text>
+<text x="530" y="931" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">metodo_validacion: VARCHAR(20)</text>
+<rect x="40" y="775" width="290" height="168" rx="6" fill="#FEF2F2" stroke="#DC2626" stroke-width="2"/>
+<rect x="40" y="775" width="290" height="30" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
+<text x="185" y="795" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A">auditoria_logs</text>
+<text x="50" y="823" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">PK id: VARCHAR(36)</text>
+<text x="50" y="841" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK usuario_id: VARCHAR(36)</text>
+<text x="50" y="859" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">FK redencion_id: VARCHAR(36) NULL</text>
+<text x="50" y="877" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">accion: VARCHAR(60)</text>
+<text x="50" y="895" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">detalle: VARCHAR(400)</text>
+<text x="50" y="913" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">ip_origen: VARCHAR(45)</text>
+<text x="50" y="931" font-family="Consolas, Segoe UI, monospace" font-size="11" fill="#1E293B">fecha_registro: TIMESTAMP</text>
+<path d="M 295 145 L 520 145" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 1025 155 L 845 155" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_zero_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 1345 145 L 1505 145" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 1955 145 L 1790 145" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 1295 253 L 1295 295 L 1665 295 L 1665 435" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 1185 253 L 1185 435" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 1505 520 L 1350 520" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 1185 657 L 1185 810" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 1025 535 L 845 535" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 682 307 L 682 450" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 682 618 L 682 775" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_one)"/>
+<path d="M 520 260 L 435 260 L 435 825 L 520 825" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 1095 253 L 1095 360 L 935 360 L 935 908 L 845 908" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 520 215 L 185 215 L 185 775" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_one)" marker-end="url(#cf_zero_many)"/>
+<path d="M 520 880 L 330 880" fill="none" stroke="#334155" stroke-width="1.9" marker-start="url(#cf_zero_one)" marker-end="url(#cf_zero_many)"/>
+<rect x="362" y="151" width="91" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="407" y="163" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (rol_id)</text>
+<rect x="308" y="126" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="311" y="137" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="479" y="126" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="482" y="137" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="874" y="161" width="123" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="935" y="173" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">0..1:N (local_id)</text>
+<rect x="984" y="136" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="987" y="147" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..1</text>
+<rect x="856" y="136" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="859" y="147" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="1373" y="151" width="104" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="1425" y="163" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (local_id)</text>
+<rect x="1358" y="126" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1361" y="137" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="1464" y="126" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1467" y="137" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="1807" y="151" width="129" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="1872" y="163" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (categoria_id)</text>
+<rect x="1914" y="126" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1917" y="137" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="1801" y="126" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1804" y="137" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="1428" y="286" width="104" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="1480" y="298" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (local_id)</text>
+<rect x="1302" y="260" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1305" y="271" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="1672" y="414" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1675" y="425" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="1133" y="335" width="104" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="1185" y="347" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (local_id)</text>
+<rect x="1192" y="260" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1195" y="271" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="1192" y="414" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1195" y="425" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="1366" y="526" width="123" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="1427" y="538" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (producto_id)</text>
+<rect x="1464" y="501" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1467" y="512" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="1361" y="501" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1364" y="512" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="1143" y="724" width="84" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="1185" y="736" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N CASCADE</text>
+<rect x="1192" y="664" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1195" y="675" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="1192" y="789" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1195" y="800" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="870" y="541" width="129" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="935" y="553" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (promocion_id)</text>
+<rect x="984" y="516" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="987" y="527" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="856" y="516" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="859" y="527" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="624" y="369" width="116" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="682" y="381" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (usuario_id)</text>
+<rect x="689" y="314" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="692" y="325" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="689" y="429" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="692" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="621" y="687" width="123" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="682" y="699" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:1 (cupon_id UQ)</text>
+<rect x="689" y="625" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="692" y="636" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="689" y="754" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="692" y="765" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..1</text>
+<rect x="380" y="536" width="110" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="435" y="548" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (cajero_id)</text>
+<rect x="479" y="241" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="482" y="252" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="479" y="806" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="482" y="817" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="883" y="701" width="104" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="935" y="713" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (local_id)</text>
+<rect x="1102" y="260" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="1105" y="271" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="856" y="889" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="859" y="900" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="294" y="206" width="116" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="352" y="218" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">1:N (usuario_id)</text>
+<rect x="479" y="196" width="16" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="482" y="207" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+<rect x="192" y="754" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="195" y="765" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="351" y="886" width="148" height="17" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.9"/>
+<text x="425" y="898" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#0F172A">0..1:N (redencion_id)</text>
+<rect x="479" y="861" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="482" y="872" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..1</text>
+<rect x="341" y="861" width="32" height="14" rx="2" fill="#FFFFFF" opacity="0.92"/>
+<text x="344" y="872" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">0..*</text>
+<rect x="40" y="1124" width="2170" height="40" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1"/>
+<text x="1125" y="1149" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#0F172A">Pata de Gallo (Crow's Foot): || (1 exacto) | |o (0 o 1) | o&lt; (0 o muchos) | |&lt; (1 o muchos) | Relación 1:1 en cupones-&gt;redenciones (cupon_id UNIQUE)</text>
 </svg>

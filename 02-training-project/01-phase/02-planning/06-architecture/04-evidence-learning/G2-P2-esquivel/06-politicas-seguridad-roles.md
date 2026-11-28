@@ -35,7 +35,7 @@ Se definen **9 políticas verificables** (3 por cada principio, superando el mí
 
 ## 3. Matriz de Permisos: Roles vs. Tablas del Modelo (4 Roles $\times$ 11 Tablas)
 
-| Tabla | `Visitante` | `Locatario` | `Cajero` | `AdminSistema / Auditor` |
+| Tabla | `Visitante` | `Locatario` | `Cajero` | `Administrador` (`ADMINISTRADOR`) |
 | :--- | :--- | :--- | :--- | :--- |
 | **`roles`** | `SELECT` | `SELECT` | `SELECT` | `SELECT` |
 | **`locales`** | `SELECT` *(solo activos)* | `SELECT`, `UPDATE` *(solo su `local_id`)* | `SELECT` *(solo su `local_id`)* | `SELECT`, `INSERT`, `UPDATE` |

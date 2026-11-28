@@ -30,7 +30,7 @@
 | **B4. Diccionario de datos** | [`04-diccionario-datos.md`](./04-diccionario-datos.md) | **Nuevo** | Documentación del 100 % de las 11 tablas y todas sus columnas (`snake_case`, tipo, tamaño, restricciones y dominio) idéntica al modelo y script SQL. |
 | **B5. Script SQL y ejecución** | [`05-script-creacion-nuvora.sql`](./05-script-creacion-nuvora.sql) y [`05-evidencia-ejecucion-sql.md`](./05-evidencia-ejecucion-sql.md) | **Nuevo** | DDL completo ANSI/PostgreSQL con 11 tablas, 15 FKs con `ON DELETE`, 6 `UNIQUE`, 15 `CHECK`, 3 índices y log real de ejecución sin errores con prueba de bloqueo a doble redención. |
 | **B6. Políticas de seguridad y roles** | [`06-politicas-seguridad-roles.md`](./06-politicas-seguridad-roles.md) | `G1-P1-esquivel/05-matriz-requisito-caso-de-uso.md` (`RNF02`, `RNF04`, `RNF09`) | Se concretaron 9 políticas (integridad, confidencialidad, disponibilidad), **hash y sal**, TLS, respaldo diario/restauración mensual, Ley 1581 y matriz de 4 roles $\times$ 11 tablas. |
-| **B7. Lista de chequeo y hallazgos** | [`07-lista-chequeo-hallazgos.md`](./07-lista-chequeo-hallazgos.md) | `G1-P2-esquivel/06-lista-chequeo-validacion.md` (enfoque de chequeo previo en G1) | Se diseñó instrumento específico para Guía 2 con **24 criterios medibles** con severidad aplicados a `G2-P1` y `G2-P2`, evidencias por criterio y 6 hallazgos reales corregidos. |
+| **B7. Lista de chequeo y hallazgos** | [`07-lista-chequeo-hallazgos.md`](./07-lista-chequeo-hallazgos.md) | `G1-P2-esquivel/06-lista-chequeo-validacion.md` (enfoque de chequeo previo en G1) | Se diseñó instrumento específico para Guía 2 con **24 criterios medibles** con severidad aplicados a `G2-P1` y `G2-P2`, evidencias por criterio y 7 hallazgos reales corregidos. |
 
 **Qué reutilicé (resumen en 3 a 5 líneas):**
 Partí del MER de 11 entidades construido en `G1-P2-esquivel/04-modelo-entidad-relacion.*`, los requisitos `RF01`–`RF20` y `RNF01`–`RNF10` definidos en `G1-P1-esquivel/`, y las decisiones de diseño de clases de `G2-P1-esquivel/` (`A1`–`A7`) para garantizar continuidad exacta entre análisis, arquitectura y datos.
@@ -50,14 +50,14 @@ Elaboré desde cero la normalización paso a paso `0FN → 3FN` de dos tablas pr
 - [x] B4 Diccionario de datos completo (100 % de las 11 tablas y todas sus columnas)
 - [x] B5 Script SQL ejecutado sin errores (evidencia adjunta en `05-evidencia-ejecucion-sql.md`) y `ON DELETE` en ≥ 3 FK (`15` FKs, `6` `UNIQUE` y `15` `CHECK`)
 - [x] B6 ≥ 6 políticas de seguridad (9 políticas con **hash y sal** en contraseñas, TLS, Ley 1581 y respaldo) y matriz de ≥ 3 roles (4 roles $\times$ 11 tablas)
-- [x] B7 Lista de chequeo de ≥ 20 criterios (24 criterios con severidad), diligenciada sobre P1 y P2, con evidencia y 6 hallazgos corregidos
+- [x] B7 Lista de chequeo de ≥ 20 criterios (24 criterios con severidad), diligenciada sobre P1 y P2, con evidencia y 7 hallazgos corregidos
 
 ## 5. Historial de commits
 
 | Día | Qué avancé (mensaje del commit) |
 |---|---|
-| **Día 1 · Jueves 26 de noviembre de 2026** | `2b36b76` — `docs(G2-P2): modelo conceptual, modelo logico 3FN y normalizacion paso a paso Nuvora` (entrega de B1, B2 y B3 con diagramas `.drawio` y `.svg`). |
-| **Día 2 · Viernes 27 de noviembre de 2026** | Entrega de Tanda 2 (`B4` Diccionario de datos, `B5` Script SQL y evidencia real de ejecución, `B6` Políticas de seguridad y roles, `B7` Lista de chequeo con hallazgos sobre P1/P2 y este `README.md`). |
+| **Día 1 · Jueves 26 de noviembre de 2026** | [`2b36b76`](https://github.com/edwin-esquivel-ADSO/ADSO-3413974/commit/2b36b76) — `docs(G2-P2): modelo conceptual, modelo logico 3FN y normalizacion paso a paso Nuvora` (entrega de B1, B2 y B3 con diagramas `.drawio` y `.svg`). |
+| **Día 2 · Viernes 27 de noviembre de 2026** | [`476d570`](https://github.com/edwin-esquivel-ADSO/ADSO-3413974/commit/476d570) — `docs(G2-P2): diccionario de datos, script SQL ejecutado, seguridad, lista chequeo y README` + corrección de anclajes en `locales -> redenciones`, orden de capas SVG, rol `ADMINISTRADOR` y `ON DELETE RESTRICT` en auditoría. |
 
 ## 6. Uso de inteligencia artificial (declaración obligatoria)
 

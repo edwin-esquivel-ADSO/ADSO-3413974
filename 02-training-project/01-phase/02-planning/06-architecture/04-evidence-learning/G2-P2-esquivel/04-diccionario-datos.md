@@ -20,8 +20,8 @@
 ### Tabla 1: `roles`
 | Columna | Tipo | Tamaño | Restricciones | Dominio / Regla de Negocio |
 | :--- | :--- | :---: | :--- | :--- |
-| `id` | `INTEGER` | n/a | `PK` | Entero positivo identificador del rol (`1`, `2`, `3`) |
-| `nombre` | `VARCHAR` | 30 | `NOT NULL`, `UNIQUE`, `CHECK (nombre IN ('VISITANTE', 'LOCATARIO', 'CAJERO'))` | Solo los 3 roles operativos de Nuvora |
+| `id` | `INTEGER` | n/a | `PK` | Entero positivo identificador del rol (`1`, `2`, `3`, `4`) |
+| `nombre` | `VARCHAR` | 30 | `NOT NULL`, `UNIQUE`, `CHECK (nombre IN ('VISITANTE', 'LOCATARIO', 'CAJERO', 'ADMINISTRADOR'))` | Los 4 roles del sistema Nuvora |
 | `descripcion` | `VARCHAR` | 150 | `NOT NULL` | Descripción funcional del alcance del rol |
 
 ### Tabla 2: `locales`
@@ -125,7 +125,7 @@
 | :--- | :--- | :---: | :--- | :--- |
 | `id` | `VARCHAR` | 36 | `PK` | Identificador único UUID v4 del registro de auditoría |
 | `usuario_id` | `VARCHAR` | 36 | `FK` $\rightarrow$ `usuarios.id`, `NOT NULL`, `ON DELETE RESTRICT` | Actor que ejecutó la acción |
-| `redencion_id` | `VARCHAR` | 36 | `FK` $\rightarrow$ `redenciones.id`, `NULL`, `ON DELETE SET NULL` | Redención asociada (cuando aplica) |
+| `redencion_id` | `VARCHAR` | 36 | `FK` $\rightarrow$ `redenciones.id`, `NULL`, `ON DELETE RESTRICT` | Redención asociada cuando aplica (permite `NULL` en eventos generales; `ON DELETE RESTRICT` impide borrar redenciones auditadas) |
 | `accion` | `VARCHAR` | 60 | `NOT NULL` | Evento registrado (ej. `CANJE_CUPON_EXITOSO`) |
 | `detalle` | `VARCHAR` | 400 | `NOT NULL` | Descripción inmutable del evento |
 | `ip_origen` | `VARCHAR` | 45 | `NOT NULL` | Dirección IPv4 o IPv6 del equipo cliente |

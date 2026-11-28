@@ -10,7 +10,7 @@ CREATE TABLE roles (
   id          INTEGER PRIMARY KEY,
   nombre      VARCHAR(30)  NOT NULL UNIQUE,
   descripcion VARCHAR(150) NOT NULL,
-  CONSTRAINT ck_roles_nombre CHECK (nombre IN ('VISITANTE', 'LOCATARIO', 'CAJERO'))
+  CONSTRAINT ck_roles_nombre CHECK (nombre IN ('VISITANTE', 'LOCATARIO', 'CAJERO', 'ADMINISTRADOR'))
 );
 
 -- 2. Locales comerciales de San Pedro Plaza
@@ -162,7 +162,7 @@ CREATE TABLE auditoria_logs (
   CONSTRAINT fk_auditoria_usuario FOREIGN KEY (usuario_id)
     REFERENCES usuarios (id) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT fk_auditoria_redencion FOREIGN KEY (redencion_id)
-    REFERENCES redenciones (id) ON DELETE SET NULL ON UPDATE CASCADE
+    REFERENCES redenciones (id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- Índices B-Tree de soporte al filtro por presupuesto (RF07) y validación en caja (RNF01)
@@ -176,7 +176,8 @@ CREATE INDEX idx_promociones_estado_fechas ON promociones (estado, fecha_inicio,
 INSERT INTO roles (id, nombre, descripcion) VALUES
   (1, 'VISITANTE', 'Consumidor en centro comercial'),
   (2, 'LOCATARIO', 'Administrador de local comercial'),
-  (3, 'CAJERO', 'Operador de validacion en caja');
+  (3, 'CAJERO', 'Operador de validacion en caja'),
+  (4, 'ADMINISTRADOR', 'Gestor del centro comercial y auditoría del sistema');
 
 INSERT INTO locales (id, nombre_comercial, numero_local, telefono_contacto, horario_atencion, logo_url, estado_operativo) VALUES
   ('11111111-1111-4111-8111-111111111111', 'Asados Plazoleta SPP', 'PC-04', '3000000001', '11:00 - 21:00', NULL, 'ACTIVO');
@@ -209,3 +210,29 @@ INSERT INTO redenciones (id, cupon_id, cajero_id, local_id, fecha_hora_canje, mo
 
 INSERT INTO auditoria_logs (id, usuario_id, redencion_id, accion, detalle, ip_origen, fecha_registro) VALUES
   ('99999999-9999-4999-8999-999999999999', '33333333-3333-4333-8333-333333333333', '88888888-8888-4888-8888-888888888888', 'CANJE_CUPON_EXITOSO', 'Cupon SPP-7F2A9B redimido correctamente en caja', '192.168.10.24', '2026-11-26 15:18:00');
+
+-- =============================================================================
+-- Consultas de verificación y casos negativos reproducibles (descomentar para probar)
+-- =============================================================================
+-- 1. Consulta JOIN extremo a extremo (esperado: Asados Plazoleta SPP | Parrilla | ... | SPP-7F2A9B | 8000 | CANJE_CUPON_EXITOSO):
+-- SELECT l.nombre_comercial, c.nombre_categoria, pr.nombre_producto, pm.titulo_oferta,
+--        hp.hora_inicio || '-' || hp.hora_fin AS franja, cp.codigo_unico,
+--        rd.monto_descontado, al.accion
+-- FROM redenciones rd
+-- JOIN cupones cp ON rd.cupon_id = cp.id
+-- JOIN promociones pm ON cp.promocion_id = pm.id
+-- JOIN productos pr ON pm.producto_id = pr.id
+-- JOIN locales l ON rd.local_id = l.id
+-- JOIN locales_categorias lc ON l.id = lc.local_id
+-- JOIN categorias c ON lc.categoria_id = c.id
+-- JOIN horarios_promocion hp ON pm.id = hp.promocion_id
+-- JOIN auditoria_logs al ON rd.id = al.redencion_id;
+--
+-- 2. Prueba negativa UNIQUE (debe fallar por doble redención de un mismo cupón):
+-- INSERT INTO redenciones VALUES ('88888888-0000-4000-8000-000000000001', '77777777-7777-4777-8777-777777777777', '33333333-3333-4333-8333-333333333333', '11111111-1111-4111-8111-111111111111', '2026-11-26 16:00:00', 8000.00, 'MANUAL');
+--
+-- 3. Prueba negativa CHECK (debe fallar por exceso de cupos usados > cupo_maximo):
+-- INSERT INTO promociones VALUES ('55555555-0000-4000-8000-000000000001', '11111111-1111-4111-8111-111111111111', '44444444-4444-4444-8444-444444444444', 'Promo Invalida', 15000.00, 10, 15, '2026-11-26 08:00:00', '2026-12-05 22:00:00', 'ACTIVA');
+--
+-- 4. Prueba negativa ON DELETE RESTRICT (debe fallar al intentar borrar redención con auditoría):
+-- DELETE FROM redenciones WHERE id = '88888888-8888-4888-8888-888888888888';
