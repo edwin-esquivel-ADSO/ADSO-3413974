@@ -41,13 +41,15 @@
   </g>
 
   <g id="cu-05">
-    <ellipse cx="310" cy="420" rx="108" ry="26" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8" filter="url(#shadow)" />
-    <text x="310" y="424" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#166534">CU-05: Generar cupón de descuento QR</text>
+    <ellipse cx="310" cy="420" rx="114" ry="27" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8" filter="url(#shadow)" />
+    <text x="310" y="416" text-anchor="middle" font-size="11" font-weight="bold" fill="#166534">CU-05: Generar cupón de</text>
+    <text x="310" y="430" text-anchor="middle" font-size="11" fill="#14532d">descuento QR</text>
   </g>
 
   <g id="cu-06">
-    <ellipse cx="310" cy="520" rx="108" ry="26" fill="#f8fafc" stroke="#475569" stroke-width="1.8" filter="url(#shadow)" />
-    <text x="310" y="524" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0f172a">CU-06: Gestionar billetera de cupones</text>
+    <ellipse cx="310" cy="520" rx="114" ry="27" fill="#f8fafc" stroke="#475569" stroke-width="1.8" filter="url(#shadow)" />
+    <text x="310" y="516" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">CU-06: Gestionar billetera</text>
+    <text x="310" y="530" text-anchor="middle" font-size="11" fill="#334155">de cupones</text>
   </g>
 
   <!-- ================= COLUMNA 2: EXTENSIONES E INCLUSIONES (cx=605) ================= -->
@@ -181,7 +183,7 @@
 
   <!-- ================= LEYENDA INFERIOR IZQUIERDA ================= -->
   <g transform="translate(205, 610)">
-    <rect width="235" height="130" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <rect width="268" height="130" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
     <text x="15" y="22" font-size="11.5" font-weight="bold" fill="#0f172a">Convenciones UML 2.5</text>
     <line x1="15" y1="44" x2="50" y2="44" stroke="#475569" stroke-width="1.8" />
     <text x="60" y="48" font-size="10.5" fill="#334155">Asociación actor - caso de uso</text>

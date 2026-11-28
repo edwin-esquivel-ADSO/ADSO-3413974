@@ -3,9 +3,9 @@
 **Programa de Formación:** Análisis y Desarrollo de Software (ADSO) — Ficha 3413974  
 **Centro de Formación:** Centro de la Industria, la Empresa y los Servicios (CIES) — SENA Regional Huila  
 **Proyecto Formativo:** Nuvora — Ecosistema Digital de Promociones, Directorio Interactivo y Plazoleta de Comidas para Centros Comerciales (Caso Piloto: San Pedro Plaza, Neiva)  
-**Autor:** Edwin Alejandro Esquivel Bahamón (`edwin-esquivel-ADSO`) — Líder Técnico, Backend & Base de Datos  
-**Equipo de Desarrollo:** Edwin Esquivel, Jose Covaleda, Paula Claros  
-**Instructores de Seguimiento:** Instructora Karol Correa (Técnica y Curricular) · Instructor Jesús Ariel González Bonilla (Planificación y Gestión Ágil)  
+**Autor:** `edwin-esquivel-ADSO` — Líder Técnico, Backend & Base de Datos  
+**Equipo de Desarrollo:** Equipo formativo Nuvora (3 integrantes · ADSO Ficha 3413974)  
+**Seguimiento Formativo:** Instructora Técnica y Curricular · Instructor de Planificación y Gestión Ágil  
 **Guía 1:** Modelo Conceptual (Análisis) — **Producto 1:** Plan de Análisis y Casos de Uso (G1-P1)  
 
 ---
